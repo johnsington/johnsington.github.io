@@ -21,7 +21,21 @@ h1, h2, h3 {
 }
  
 header.band h1 {
+	font-family: 'PT Serif', sans-serif;
+	letter-spacing: 5px;
     font-size: 3em;
     line-height: 1em;
     margin-bottom: 1em;
+}
+
+/*below is only enabled for screens larger than 767px; first breakpoint*/
+@media only screen and (min-width: 767px){
+	header.band{
+		background-image:url(../img/beach-dark.jpg);
+		background-size: 100%;
+	}
+
+	header.band h1 {
+		font-size: 3.25em; 
+	}
 }
