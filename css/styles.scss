@@ -33,22 +33,6 @@ header.band h1 {
     margin-bottom: 1em;
 }
 
-a.button {
-    background: #ffa500;
-    text-align: center;
-    padding: .5em 1em;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 0.2em 0 #ab3009;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
- 
-a.button:hover {
-    background: #CC6600;
-}
-
 /*below is only enabled for screens larger than 767px; first breakpoint*/
 @media only screen and (min-width: 767px){
 	header.band{
