@@ -592,7 +592,7 @@ h1, h2, h3 {
   text-align: center; }
 
 header.band h1 {
-  font-family: 'PT Serif', serif;
+  font-family: 'PT Serif', sans-serif;
   letter-spacing: 5px;
   font-size: 3em;
   line-height: 1em;
