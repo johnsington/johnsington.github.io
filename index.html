@@ -18,7 +18,7 @@
 
 <!--Look up what fluid_skeleton.css does-->
 
-<header class="band" 
+<header class="band skrollable rendered" 
     data-start="background-position:0px 0px;"
     data-end="background-position:0px -500px;">
 
@@ -88,14 +88,14 @@
 </footer><!--/ main-->
 
 <!--skrollr.js needs to be loaded before used-->
-<script type="text/javascript" src="js/skrollr.min.js"></script>
+<script type="text/javascript" src="js/skrollr.js"></script>
 
 <!--now initiate skroller-->
 <script type="text/javascript">
-        alert("skrollr loaded");
-        var s = skrollr.init();
+    skrollr.init({
+        forceHeight: false
+    });
     </script>
-
 </body>
 
 </html>
