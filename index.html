@@ -2,6 +2,16 @@
 <html>
 
 <script type="text/javascript">alert("loaded webpage");</script>
+<!--skrollr.js needs to be loaded before used-->
+<script type="text/javascript"
+        src="js/skrollr.min.js">
+        </script>
+
+<!--now initiate skroller-->
+<script type="text/javascript">
+        var s = skrollr.init();
+        alert("skrollr loaded");
+    </script>
 <head>
 	<meta charset="utf-8">
 	<!--viewport-->
@@ -86,16 +96,7 @@
  
 </footer><!--/ main-->
 
-<!--skrollr.js needs to be loaded before used-->
-<script type="text/javascript"
-        src="js/skrollr.min.js">
-        </script>
 
-<!--now initiate skroller-->
-<script type="text/javascript">
-        var s = skrollr.init();
-        alert("skrollr loaded");
-    </script>
 </body>
 
 </html>
