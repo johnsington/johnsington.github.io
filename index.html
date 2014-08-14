@@ -16,8 +16,8 @@
 <!--Look up what fluid_skeleton.css does-->
 
 <header class="band" 
-    data-top="background-position:0px 0px;"
-    data-200-start="background-position:0px -250px;">
+    data-0="background-position:0px 0px;"
+    data-300="background-position:0px -250px;">
  
     <div class="container">
  
@@ -85,16 +85,12 @@
 
 <!--skrollr.js needs to be loaded before used-->
 <script type="text/javascript"
-        src="https://github.com/Prinzhorn/skrollr/blob/master/dist/skrollr.min.js">
+        src="https://raw.githubusercontent.com/Prinzhorn/skrollr/master/dist/skrollr.min.js">
         </script>
 
 <!--now initiate skroller-->
 <script type="text/javascript">
-    window.onload = function(){
-        skrollr.init({
-            forceHeight: false
-        });
-    }
+        skrollr.init();
     </script>
 </body>
 
