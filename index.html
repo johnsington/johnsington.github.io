@@ -16,15 +16,15 @@
 <!--Look up what fluid_skeleton.css does-->
 
 <header class="band" 
-    data-0="background-position:0px 0px;"
-    data-500="background-position:0px -250px;">
+    data-top="background-position:0px 0px;"
+    data-200-start="background-position:0px -250px;">
  
     <div class="container">
  
         <div class="columns sixteen">
          	<h1>JOHNSINGTON</h1>
  
-			<a class="button" href="http://johnsington.github.io">by John</a>
+			<a class="button" href="http://johnsington.github.io">v1</a>
         </div><!--/ columns--> 
      
     </div><!--/ container-->       
@@ -38,7 +38,9 @@
         <div class="columns twelve offset-by-two">            
          	<h2>My future could mean anything.</h2>
                  
-			<p><strong>A pint 'o mild. Tell thi summat for nowt th'art nesh thee chuffin' nora eeh appens as maybe. Ey up is that thine god's own county. Be reet be reet nah then michael palin bloomin' 'eck gerritetten.</strong> Ah'll learn thi soft southern pansy. Any rooad soft southern pansy nobbut a lad mardy bum shu' thi gob face like a slapped arse. Ee by gum mardy bum michael palin. God's own county. Th'art nesh thee. Appens as maybe god's own county where's tha bin.</p>
+			<p><strong>Hi I'm John, and I'm not your ordinary engineering student. 
+            </strong>
+            Apart from generating compile errors and writing proofs, I take part in a variety of Waterloo clubs and societies such as the Engineering Ambassadors and Style Society. I juggle a class act of being a thrifted anti-hipster, pop music connoisseur, and gym junkie all at the same time, and you can also catch me doing improv piano covers with my friends in coffee houses around campus. You may also find me caffeine-wired in 24-hour hackathons working on yet another copy of Instagram. I'm from the Philippines, but I've also lived in the US for most of my life before my rocket crashlanded into Canada. </p>
         </div><!--/ column-->
  
     </div><!--/ container-->
@@ -82,14 +84,18 @@
 </footer><!--/ main-->
 
 <!--skrollr.js needs to be loaded before used-->
-<script type="text/javascript" src="js/skrollr.min.js"></script>
+<script type="text/javascript"
+        src="https://github.com/Prinzhorn/skrollr/blob/master/dist/skrollr.min.js">
+        </script>
 
 <!--now initiate skroller-->
 <script type="text/javascript">
-    var s = skrollr.init({
-        forceHeight: true
-    });
-</script>
+    window.onload = function(){
+        skrollr.init({
+            forceHeight: false
+        });
+    }
+    </script>
 </body>
 
 </html>
