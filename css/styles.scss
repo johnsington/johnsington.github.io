@@ -2,15 +2,18 @@
 @import "normalize";
 @import "fluid_skeleton";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:700italic,300italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald:300);
 
 html {
     font: 100%/1.5em 'PT Sans', sans-serif;
 }
 
 header.band {
-	background: #4b371f;
+	background: #003399;
 	color: white;
 	text-align: center;
+	overflow: hidden;
 	padding: 10% 0 15% 0;
 }
 
@@ -18,25 +21,114 @@ h1, h2, h3 {
     font-family: 'PT Serif', serif;
     font-weight: 700;
     text-align: center;
+    z-index: 2;
+    position:relative;
+}
+
+header.band h3{
+	font-family: 'Merriweather', serif;
+	font-style: italic;
+	font-size: medium;
+	font-weight: 400;
 }
  
 header.band h1 {
-	font-family: 'PT Serif', sans-serif;
+	font-family: 'PT Serif', serif;
 	letter-spacing: 5px;
     font-size: 3em;
+    font-style: italic;
     line-height: 1em;
     margin-bottom: 1em;
+    text-transform: uppercase;
 }
 
 /*below is only enabled for screens larger than 767px; first breakpoint*/
 @media only screen and (min-width: 767px){
-	header.band{
+	header.band.first{
 		background-image:url(../img/beach-dark.jpg);
 		background-size: 100%;
 	}
 
+	header.band.second{
+		background-image:url(../img/venusGIF.gif);
+		background-size: 100%;
+		background-color: #000000;
+		background-position: 0px -400px;
+		overflow: hidden;
+	}
+
 	header.band h1 {
-		font-family: 'PT Serif', sans-serif;
 		font-size: 3.25em; 
 	}
+}
+
+.button{
+  position:relative;
+  display:inline-block;
+  color:black;
+  background-color:black;
+  margin-left:2%;
+  width:30%;
+  height:10em;
+  border-radius:0.2em;
+  overflow: hidden;
+}
+
+.button-fill{
+  height:15em;
+  z-index:-1;
+  background-position:center;
+  -webkit-transition: all 0.3s;
+  opacity:0.5;
+}
+
+#image1{
+  background:url(http://www.oscoconstructiongroup.com/Resources/Images/images_construction/Construction%20Management/CIBC%20zoomed%20in.jpg) no-repeat scroll 0 0 transparent;
+  background-size: cover;
+}
+
+#image2{
+  background:url(http://tuc.org/mediashare/za/73zvfy14zyxk28yrimwl70sqhgjulr-pre.jpg) no-repeat scroll 0 0 transparent;
+  background-position:center;
+  background-size:cover;
+}
+
+#image3{
+  background:url(http://ww4.hdnux.com/photos/20/56/65/4386131/3/628x471.jpg) no-repeat scroll 0 0 transparent;
+  background-position:center;
+  background-size:cover;
+}
+
+.button-fill:hover{
+  opacity:0.4;
+  -webkit-filter: blur(2px);
+  filter:blur(20px);
+}
+
+.button-text{
+  font-family: 'Oswald', sans-serif;
+  color:white;
+  top: 5%;
+  left: 5%;
+  font-size:20px;
+  display: inline-block;
+  vertical-align:middle;
+  text-align: left;
+  position:absolute;
+  z-index:1;
+  text-align:center;
+  pointer-events:none;
+ 
+}
+
+.last p{
+	text-align:right;
+}
+
+a {
+	text-decoration: none;
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 700;
+	color:black;
+	margin-left: 5px;
 }
