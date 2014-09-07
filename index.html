@@ -9,12 +9,31 @@
 	<title>JOHNSINGTON</title>
 
 	<link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src= "js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src= "js/jquery.scrollupmenu.js"></script>
+    <!--script for scroll up header-->
+    <script type="text/javascript">
+        $(function() {
+            $('#top').scrollUpMenu();
+        });
+    </script>
 
 </head>
 
 <body>
 
 <!--Look up what fluid_skeleton.css does-->
+<!--menu header-->
+<div class="band main">
+    <div id="top">
+        <ul class = "menu">
+            <li><p id="menutitle">JOHNSINGTON</p></li>
+            <li><a class="menu-button" href="http://johnsington.github.io">Home</a></li>
+            <li><a class="menu-button" href="https://www.dropbox.com/s/0100xyp9v4dlnr0/John%20Salaveria%20-%202A%20Resume%20Condensed.pdf?dl=1">Resume</a></li>
+            <li><a class="menu-button" href="http://johnsing-ton.blogspot.ca/">Blog</a></li>
+        </ul>
+    </div>
+</div>
 
 <header class="band first" 
     data-0="background-position:0px 0px;"
@@ -91,7 +110,7 @@
             </p>
         </div>
     </div>
-
+</footer>
 <!--skrollr.js needs to be loaded before used-->
 <script type="text/javascript" src="js/skrollr.js"></script>
 

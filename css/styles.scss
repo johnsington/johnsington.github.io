@@ -131,4 +131,58 @@ a {
 	font-weight: 700;
 	color:black;
 	margin-left: 5px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
+
+a:hover{
+	color: #00CCFF;
+}
+
+#top{
+	width:100%;
+	height: 50px;
+	top: 0;
+	left: 0;
+	background-color: black;
+	border-bottom: 1px solid #ffffff;
+	position: fixed;
+	z-index: 10;
+}
+
+.menu{
+	position: relative;
+	top: 26%;
+	width: 70%;
+	text-align: center;
+	margin: auto;
+	padding: 0px 0px;
+	vertical-align: center;
+	color:white;
+}
+
+.menu li{
+	list-style-type: none;
+	display: inline;
+}
+
+#menutitle{
+	display: inline;
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+	font-size: 18px;
+	padding: 0% 1.5% 0% 0%;
+	border-right: 1px solid #ffffff;
+}
+
+.menu a {
+	color: white;
+	padding: 0% 0% 0% 0%;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.menu a:hover{
+	color: #00CCFF;
+}
+
