@@ -658,6 +658,9 @@ header.band h1 {
   background-position: center;
   background-size: cover; }
 
+.firstdiv {
+  padding-top: 50px; }
+
 .button-fill:hover {
   opacity: 0.4;
   -webkit-filter: blur(2px);
@@ -732,3 +735,19 @@ a:hover {
 
 .menu a:hover {
   color: #00CCFF; }
+
+/*PROJECTS CSS*/
+#proj-title {
+  padding-top: 25px;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 400;
+  font-style: italic; }
+
+#proj-caption {
+  font-family: 'Merriweather', serif;
+  font-size: 12px;
+  font-style: italic; }
+
+#band-proj {
+  background-color: yellow; }
