@@ -14,7 +14,7 @@ header.band {
 	color: white;
 	text-align: center;
 	overflow: hidden;
-	padding: 10% 0 15% 0;
+	padding: 10% 0 10% 0;
 }
 
 h1, h2, h3 {
@@ -45,7 +45,7 @@ header.band h1 {
 /*below is only enabled for screens larger than 767px; first breakpoint*/
 @media only screen and (min-width: 767px){
 	header.band.first{
-		background-image:url(../img/beach-dark.jpg);
+		background-image:url(../img/bwcover1.png);
 		background-size: 100%;
 	}
 
@@ -200,12 +200,46 @@ a:hover{
 }
 
 #proj-caption{
-	font-family: 'Merriweather', serif;
-	font-size: 12px;
-	font-style: italic;
+	text-align: center;
+	font-size: 14px;
 }
 
 #band-proj{
+	background-image: url(../img/bwcover2.png);
+	background-size: cover;
 	background-color:yellow;
+	border-bottom: 1px solid #000000;
+	color: white;
+}
+
+.projectImage{
+	margin: 15px;
+	width: 35%;
+	height: 150px;
+	background-color: black;
+	background-size: cover;
+	display: inline;
+	box-shadow: -4px 4px #DEDEDE;
+}
+
+#projimage1{
+	background-image: url(../res/threadswap-screen.jpg);
+}
+
+#projimage2{
+	background-image: url(https://raw.githubusercontent.com/dinahshi/MyDay/master/Screenshot.jpg);
+}
+
+.projectImageCont{
+	width: 30%;
+}
+
+.projectText h2{
+	text-align: left;
+}
+.projectText{
+	text-align: left;
+	width: 60%;
+	float: right;
 }
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="threadSwap">
+<head>
+	<meta charset="utf-8">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>ThreadSwap</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript" src ="js/angular.min.js"></script>
+	<script type="text/javascript" src ="js/ts-ang.js"></script>
+	<script type="text/javascript" src = "js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		function scrollToBottom() {
+			$('html, body').animate({scrollTop:$(document).height()}, 'slow');
+		}
+	</script>
+	<script type="text/javascript" src ="http://code.angularjs.org/1.2.13/angular-animate.js"></script>
+</head>
+<body ng-controller="ThreadController as threadSwap">
+	<header class="band first" ng-controller="PanelController as panel">
+	<div class="container">
+		<div class="columns eight first">
+			<h1>ThreadSwap</h1>
+			<h3>An online fashion classifieds created by John and Luisa.</h3>
+		</div>
+		<div class="columns eight buttondiv">
+			<a href="" class="button" ng-click="panel.isSelected()">Post Swap</a>
+			<a href="" class="button" ng-click="panel.selectTab()">Manage Swap</a>
+		</div>
+	</div>
+	<div class ="container">
+		<div class="columns sixteen">
+			<div class="pSwapForm" ng-show="panel.tab">
+				<form name="addThreadForm" ng-submit="threadSwap.addThread()">
+				<input type="text" name="item" placeholder="Swap Item" ng-model="threadSwap.newThread.name"><br>
+				<input type="text" name="seller" placeholder="Seller Name" ng-model="threadSwap.newThread.seller"><br>
+				<input type="text" name="description" placeholder="Description" ng-model="threadSwap.newThread.description"><br>
+				<input type="text" name="price" placeholder="Price" ng-model="threadSwap.newThread.price"><br>
+				<input type="text" name="imageURL" placeholder="Image URL" ng-model="threadSwap.newThread.imageURL"><br>
+				<img id="review-img" ng-src="{{threadSwap.newThread.imageURL}}"></img>
+				<input class = "button" type="submit" id="subButton" value="Submit" onclick="scrollToBottom()">
+				</form>
+			</div>
+		</div><!--cols six-->
+	</div><!--container-->
+	</header>
+	<hr>
+	<div class="band">
+		<div class="container">
+			<div class="columns sixteen feed">
+				<div class="card" ng-repeat = "item in threadSwap.items" >
+					<img ng-src="{{item.imageURL}}"id="img-holder"></img>
+					<div class="card-text">
+						<h3>{{item.name}}</h3>
+						<h2>{{item.price | currency}}</h2>
+						<br>
+						<p class="seller">Seller: </p>
+						<p class="seller" id="seller_id">{{item.seller}}</p>
+						<p>{{item.description}}</p>
+						<div class="icon-row">
+							<div class="icon" id="IG"></div>
+							<div class="icon" id="LOC"></div>
+						</div><!--iconrow-->
+					</div><!--card-text-->
+				</div><!--card-->
+			</div><!--columns four-->
+		</div><!--cont-->
+	</div><!--band-->
+</body>
+</html>

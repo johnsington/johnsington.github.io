@@ -1,13 +1,10 @@
-/*imports*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
-@import url(http://fonts.googleapis.com/css?family=Merriweather:700italic,300italic);
-@import url(http://fonts.googleapis.com/css?family=Oswald:300);
+@import url(http://fonts.googleapis.com/css?family=Arvo:700|Open+Sans:300,700|Oswald);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -580,203 +577,159 @@ or wrap each row of columns in a <div class="row"> */
   box-sizing: border-box; }
 
 html {
-  font: 100%/1.5em 'PT Sans', sans-serif; }
+  font: 100%/1.5em 'Open Sans', sans-serif; }
 
 header.band {
-  background: #003399;
-  color: white;
   text-align: center;
   overflow: hidden;
-  padding: 10% 0 10% 0; }
+  padding: 4% 0 2.5% 0;
+  background-image: url(../res/header_bg.jpg);
+  color: white; }
 
-h1, h2, h3 {
-  font-family: 'PT Serif', serif;
-  font-weight: 700;
-  text-align: center;
-  z-index: 2;
-  position: relative; }
+header.band.first h1 {
+  font-family: 'Arvo';
+  text-transform: uppercase;
+  font-size: 2em; }
 
-header.band h3 {
-  font-family: 'Merriweather', serif;
-  font-style: italic;
-  font-size: medium;
-  font-weight: 400; }
+header.band.first h3 {
+  font-size: .75em;
+  font-weight: 300; }
 
-header.band h1 {
-  font-family: 'PT Serif', serif;
-  letter-spacing: 5px;
-  font-size: 3em;
-  font-style: italic;
-  line-height: 1em;
-  margin-bottom: 1em;
-  text-transform: uppercase; }
+.buttondiv {
+  padding: 5% 0% 5% 0%;
+  text-align: center; }
 
-/*below is only enabled for screens larger than 767px; first breakpoint*/
 @media only screen and (min-width: 767px) {
-  header.band.first {
-    background-image: url(../img/bwcover1.png);
-    background-size: 100%; }
+  header.band {
+    text-align: left; }
 
-  header.band.second {
-    background-image: url(../img/venusGIF.gif);
-    background-size: 100%;
-    background-color: #000000;
-    background-position: 0px -400px;
-    overflow: hidden; }
+  header.band.first h1 {
+    font-size: 3.75em; }
 
-  header.band h1 {
-    font-size: 3.25em; } }
+  header.band.first h3 {
+    font-size: .9em; }
+
+  div.middle {
+    padding: 5% 0% 2% 0%; }
+
+  .pSwapForm {
+    width: 270px; }
+
+  div.feed {
+    padding: 0px;
+    background-color: white; } }
+input {
+  margin: 2% 0% 2% 0%;
+  width: 100%; }
+
 .button {
-  position: relative;
-  display: inline-block;
-  color: black;
-  background-color: black;
-  margin-left: 2%;
-  width: 30%;
-  height: 10em;
-  border-radius: 0.2em;
-  overflow: hidden; }
-
-.button-fill {
-  height: 15em;
-  z-index: -1;
-  background-position: center;
-  -webkit-transition: all 0.3s;
-  opacity: 0.5; }
-
-#image1 {
-  background: url(http://www.oscoconstructiongroup.com/Resources/Images/images_construction/Construction%20Management/CIBC%20zoomed%20in.jpg) no-repeat scroll 0 0 transparent;
-  background-size: cover; }
-
-#image2 {
-  background: url(http://tuc.org/mediashare/za/73zvfy14zyxk28yrimwl70sqhgjulr-pre.jpg) no-repeat scroll 0 0 transparent;
-  background-position: center;
-  background-size: cover; }
-
-#image3 {
-  background: url(http://ww4.hdnux.com/photos/20/56/65/4386131/3/628x471.jpg) no-repeat scroll 0 0 transparent;
-  background-position: center;
-  background-size: cover; }
-
-.firstdiv {
-  padding-top: 50px; }
-
-.button-fill:hover {
-  opacity: 0.4;
-  -webkit-filter: blur(2px);
-  filter: blur(20px); }
-
-.button-text {
+  text-shadow: 0px 3px #520202;
+  border-radius: 5px;
+  text-decoration: none;
   font-family: 'Oswald', sans-serif;
   color: white;
-  top: 5%;
-  left: 5%;
-  font-size: 20px;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
-  position: absolute;
-  z-index: 1;
-  text-align: center;
-  pointer-events: none; }
-
-.last p {
-  text-align: right; }
-
-a {
-  text-decoration: none;
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 700;
-  color: black;
-  margin-left: 5px;
+  padding: 2% 8% 2% 8%;
+  background-color: #9C1E1E;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
 
-a:hover {
-  color: #00CCFF; }
+header.band.first a {
+  margin-left: 10px; }
 
-#top {
-  width: 100%;
-  height: 50px;
-  top: 0;
-  left: 0;
-  background-color: black;
-  border-bottom: 1px solid #ffffff;
-  position: fixed;
-  z-index: 10; }
+header.band.first a:hover {
+  background-color: #520202; }
 
-.menu {
+.card {
+  width: 270px;
+  height: 410px;
+  background-color: white;
+  box-shadow: -4px 4px #DEDEDE;
+  border-top: 1px solid #DEDEDE;
+  border-right: 1px solid #DEDEDE;
+  border-left: 1px solid #575757;
+  border-bottom: 1px solid #575757;
+  margin: 0.5% 0% 1.5% 3%;
+  float: left;
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -ms-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all; }
+
+.card #img-holder {
+  width: 257px;
+  height: 257px;
+  margin: 5px;
+  background-color: red; }
+
+.card-text {
   position: relative;
-  top: 26%;
-  width: 70%;
-  text-align: center;
-  margin: auto;
-  padding: 0px 0px;
-  vertical-align: center;
-  color: white; }
+  margin: 0px 7px 7px 7px;
+  height: 128px; }
 
-.menu li {
-  list-style-type: none;
+.icon-row {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+  margin: 0 0;
+  text-transform: uppercase;
+  float: left; }
+
+.card h2 {
+  float: right;
+  vertical-align: top;
+  margin: 0 0; }
+
+.card p {
+  font-size: 8pt;
+  overflow: inherit;
+  margin: 0;
+  padding: 0;
+  font-weight: 300; }
+
+.icon {
+  margin-top: 14px;
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  display: inline-block; }
+
+#IG {
+  background-image: url(../res/ig_icon.png); }
+
+#LOC {
+  background-image: url(../res/loc_icon.png); }
+
+.seller {
   display: inline; }
 
-#menutitle {
-  display: inline;
-  font-family: 'PT Serif', serif;
-  font-style: italic;
-  font-size: 18px;
-  padding: 0% 1.5% 0% 0%;
-  border-right: 1px solid #ffffff; }
-
-.menu a {
-  color: white;
-  padding: 0% 0% 0% 0%;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.menu a:hover {
-  color: #00CCFF; }
-
-/*PROJECTS CSS*/
-#proj-title {
-  padding-top: 25px;
-  text-transform: uppercase;
-  font-size: 100px;
-  font-weight: 400;
+#seller_id {
+  font-weight: 700;
   font-style: italic; }
 
-#proj-caption {
-  text-align: center;
-  font-size: 14px; }
+.pSwapForm {
+  padding: 15px;
+  border-radius: 5px;
+  width: 300px;
+  background-color: white;
+  margin: 0 auto;
+  color: black; }
 
-#band-proj {
-  background-image: url(../img/bwcover2.png);
-  background-size: cover;
-  background-color: yellow;
-  border-bottom: 1px solid #000000;
-  color: white; }
+div.columns.five {
+  margin: 0% 0% 0% .5%; }
 
-.projectImage {
-  margin: 15px;
-  width: 35%;
-  height: 150px;
-  background-color: black;
-  background-size: cover;
-  display: inline;
-  box-shadow: -4px 4px #DEDEDE; }
+#review-img {
+  width: 100%;
+  height: 250px;
+  background-color: gray; }
 
-#projimage1 {
-  background-image: url(../res/threadswap-screen.jpg); }
+.card.ng-enter {
+  opacity: 0; }
 
-#projimage2 {
-  background-image: url(https://raw.githubusercontent.com/dinahshi/MyDay/master/Screenshot.jpg); }
-
-.projectImageCont {
-  width: 30%; }
-
-.projectText h2 {
-  text-align: left; }
-
-.projectText {
-  text-align: left;
-  width: 60%;
-  float: right; }
+.card.ng-enter-active {
+  opacity: 1; }
