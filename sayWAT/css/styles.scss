@@ -1,0 +1,103 @@
+@import "normalize";
+@import "fluid_skeleton";
+
+@import url(http://fonts.googleapis.com/css?family=Arvo:700|Open+Sans:300,700|Oswald);
+
+html {
+    font: 100%/1em 'Open Sans', sans-serif;
+}
+
+
+header.band.first{
+	color: white;
+	text-align: center;
+	background-color: red;
+	padding-top:15px;
+	padding-bottom: 10px;
+}
+
+header.band.first h1{
+	display: inline-block;
+	font-size: 3em;
+	margin-bottom: -60px;
+}
+
+header.band.first h3{
+	font-size: 1.3em;
+	font-weight: 300;
+}
+
+#say{
+	font-weight: 300;
+}
+
+div.band.feed{
+	padding-top: 20px;
+	margin-left: auto;
+}
+.card{
+ 	width: 270px;
+	height: 270px;
+	background-color: white;
+	box-shadow: -4px 4px #DEDEDE;
+	border-top: 1px solid #DEDEDE;
+	border-right: 1px solid #DEDEDE;
+	border-left: 1px solid #575757;
+	border-bottom: 1px solid #575757;
+	margin: auto;
+	-webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+    transition: 1s all;
+}
+
+.card #img-holder{
+	width: 257px;
+	height: 257px;
+	margin: 5px;
+	background-color: red;
+}
+
+.card-text{
+	position: relative;
+	margin: 0px 7px 7px 7px;
+	height: 128px;
+}
+
+.icon-row{
+	position:absolute;
+  	bottom:0;
+  	left:0;
+}
+.card h3{
+	font-family: 'Oswald', sans-serif;
+	font-size: 16pt;
+	margin: 0 0;
+	text-transform: uppercase;
+	float: left;
+}
+
+.card h2{
+	float: right;
+	vertical-align: top;
+	margin: 0 0;
+}
+
+.card p{
+	font-size: 8pt;
+	overflow: inherit;
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+}
+
+.icon{
+	margin-top: 14px;
+	margin-right: 4px;
+	width: 20px;
+	height: 20px;
+	background-size:100%;
+	display: inline-block;
+
+}
