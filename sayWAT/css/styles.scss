@@ -11,7 +11,8 @@ html {
 header.band.first{
 	color: white;
 	text-align: center;
-	background-color: red;
+	background-image: url("http://mycolorscreen.com/wp-content/uploads/users/Giel88/light_gradient_desktop_1920x1200_wallpaper-318286.jpg");
+	background-size: 1000px 1000px;
 	padding-top:15px;
 	padding-bottom: 10px;
 }
@@ -23,6 +24,7 @@ header.band.first h1{
 }
 
 header.band.first h3{
+	display: inline-block;
 	font-size: 1.3em;
 	font-weight: 300;
 }
@@ -31,8 +33,11 @@ header.band.first h3{
 	font-weight: 300;
 }
 
+#blank{
+	color:yellow;
+}
+
 div.band.feed{
-	padding-top: 20px;
 	margin-left: auto;
 }
 .card{
@@ -61,8 +66,21 @@ div.band.feed{
 
 .card-text{
 	position: relative;
-	margin: 0px 7px 7px 7px;
-	height: 128px;
+	margin-left: auto;
+	top:-53%;
+}
+
+#postTitle{
+	color: white;
+	width: 257px;
+	text-align: center;
+	font-size: 1.5em;
+	opacity: 0;
+	-webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    transition: 0.5s all;
 }
 
 .icon-row{
@@ -100,4 +118,41 @@ div.band.feed{
 	background-size:100%;
 	display: inline-block;
 
+}
+
+.pSwapForm{
+	padding: 15px;
+	border-radius: 5px;
+	width: 300px;
+	background-color: white;
+	margin: 0 auto;
+	color: black;
+}
+
+.button{
+	margin-bottom: 10px;
+	text-shadow: 0px 3px #520202;
+	border-radius: 5px;
+	text-decoration: none;
+	font-family: 'Oswald', sans-serif;
+	color:white;
+	padding: 12px 122px 12px 122px;
+	background-color:black;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 0;
+}
+
+.pSwapForm input{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 100%;
+}
+
+p.quote{
+	text-align: center;
+}
+
+.feedArray{
+	background-color: yellow;
 }
