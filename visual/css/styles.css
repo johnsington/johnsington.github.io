@@ -670,7 +670,7 @@ header.band h1 {
 .module h2 {
   color: white;
   text-decoration: none;
-  margin-top: 1.25px;
+  margin-top: 2.5px;
   opacity: 0.75;
   width: 300px;
   height: 300px;
@@ -750,7 +750,7 @@ header.band h1 {
   float: left; }
 
 .projectImage {
-  margin: 1.25px 0px 0px 2.5px;
+  margin: 2.5px 0px 0px 2.5px;
   width: 300px;
   opacity: 1;
   height: 300px;
