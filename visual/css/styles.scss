@@ -1,0 +1,229 @@
+/*imports*/
+@import "normalize";
+@import "fluid_skeleton";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,300);
+
+html {
+    font: 100%/1.5em 'PT Sans', sans-serif;
+    background-color: white;
+}
+
+header.band {
+	background-color: white;
+	color: black;
+	text-align: center;
+	overflow: hidden;
+	padding: 3% 0% 0% 0%;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    z-index: 2;
+    position:relative;
+}
+
+header.band h3{
+	font-family: 'Oswald', serif;
+	font-size: medium;
+	font-weight: 300;
+}
+
+#light{
+	font-weight: 300;
+}
+header.band h1 {
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 10px;
+    font-size: 1em;
+    line-height: 0.05em;
+    margin: 0.5em 0em 0.1em 0em;
+    display: inline;
+    text-transform: uppercase;
+}
+
+#container{
+	padding-top: 15px;
+	margin-left: auto;
+	padding-left: 40px;
+	padding-right: 20px;
+}
+
+/*below is only enabled for screens larger than 767px; first breakpoint*/
+@media only screen and (min-width: 767px){
+	#container{
+		position: relative;
+		width: 100%;
+		margin-top: 15px;
+		margin-left: auto;
+		padding-left: 0px;
+	}
+	header.band.first{
+		background-size: 100%;
+	}
+
+	header.band.second{
+		background-size: 100%;
+		background-color: #000000;
+		background-position: 0px -400px;
+		overflow: hidden;
+	}
+
+	header.band h1{
+		padding-top: 20px;
+		font-size: 3.25em; 
+	}
+	.band.main #proj-title{
+		font-size: 4em;
+	}
+
+	header.band.first h1{
+	display: inline-block;
+	font-size: 3em;
+	margin-bottom: 10px;
+	}
+
+header.band.first h3{
+	display: inline-block;
+	font-size: 1.3em;
+	font-weight: 300;
+	}
+}
+
+.band.feed.module{
+	width: 300px;
+	height: 300px;
+	background-color: red;
+}
+
+.module a{
+	text-decoration: none;
+	z-index: 10;
+	width:300px;
+	height: 300px;
+	top: 0px;
+	left: 0px;
+	float: left;
+}
+
+.module h2{
+	color:white;
+	text-decoration: none;
+	margin-top: 1.25px;
+	opacity: 0.75;
+	width:300px;
+	height: 300px;
+	text-align: left;
+	letter-spacing: 3px;
+	padding:0px;
+	z-index:2;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.module:hover h2{
+	opacity: 0;
+}
+.module:hover .projectImage{
+	-webkit-filter: grayscale(0%) brightness(100%);
+  	-moz-filter: grayscale(0%) brightness(100%);
+  	-ms-filter: grayscale(0%) brightness(100%);
+  	-o-filter: grayscale(0%) brightness(100%);
+  	filter: grayscale(0%);
+  	filter: url(grayscale.svg); /* Firefox 4+ */
+  	filter: gray; /* IE 6-9 */;
+}
+
+#container{
+	position: relative;
+	width: 98%;
+	margin-left: auto;
+}
+#image1{
+  background:url(http://www.francisvachon.com/blog/wp-content/uploads/2010/05/CIBC-01.jpg) no-repeat scroll 0 0 transparent;
+  background-size: cover;
+}
+
+#image2{
+  background:url(http://tuc.org/mediashare/za/73zvfy14zyxk28yrimwl70sqhgjulr-pre.jpg) no-repeat scroll 0 0 transparent;
+  background-position:center;
+  background-size:cover;
+}
+
+#image3{
+  background:url(http://ww4.hdnux.com/photos/20/56/65/4386131/3/628x471.jpg) no-repeat scroll 0 0 transparent;
+  background-position:center;
+  background-size:cover;
+}
+
+.firstdiv{
+	padding-top: 50px;
+}
+
+.button-fill:hover{
+  opacity:0.4;
+  -webkit-filter: blur(2px);
+  filter:blur(20px);
+}
+
+.button-text{
+  font-family: 'Oswald', sans-serif;
+  color:white;
+  top: 5%;
+  left: 5%;
+  font-size:20px;
+  display: inline-block;
+  vertical-align:middle;
+  text-align: left;
+  position:absolute;
+  z-index:1;
+  text-align:center;
+  pointer-events:none;
+ 
+}
+
+.last p{
+	text-align:right;
+}
+
+.module{
+	display: inline-block;
+	color:white;
+	width:300x;
+	height:300px;
+	margin: 0px 0px 0px 2.5px;
+	float: left;
+}
+
+.projectImage{
+	margin: 1.25px 0px 0px 2.5px;
+	width: 300px;
+	opacity: 1;
+	height: 300px;
+	background-color: black;
+	background-size: cover;
+	position: inline-block;
+	-webkit-filter: grayscale(100%) brightness(60%);
+  	-moz-filter: grayscale(100%) brightness(60%);
+  	-ms-filter: grayscale(100%) brightness(60%);
+  	-o-filter: grayscale(100%) brightness(60%);
+  	filter: grayscale(100%) brightness(60%);
+  	filter: url(grayscale.svg); /* Firefox 4+ */
+  	filter: gray; /* IE 6-9 */;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#noise{
+	-webkit-filter: grayscale(0%) brightness(100%);
+  	-moz-filter: grayscale(0%) brightness(100%);
+  	-ms-filter: grayscale(0%) brightness(100%);
+  	-o-filter: grayscale(0%) brightness(100%);
+  	filter: grayscale(0%) brightness(100%);	
+}

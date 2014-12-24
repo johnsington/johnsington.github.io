@@ -589,6 +589,7 @@ header.band.first {
 
 header.band.first h1 {
   display: inline-block;
+  letter-spacing: 3px;
   font-size: 3em;
   margin-bottom: -60px; }
 
