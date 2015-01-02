@@ -3,41 +3,66 @@
 @import "fluid_skeleton";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
 @import url(http://fonts.googleapis.com/css?family=Merriweather:700italic,300italic);
-@import url(http://fonts.googleapis.com/css?family=Oswald:300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,300);
 
 html {
     font: 100%/1.5em 'PT Sans', sans-serif;
 }
 
 header.band {
-	background-color: gray;
+	background-color: black;
 	color: white;
 	text-align: center;
 	overflow: hidden;
-	padding: 18% 0% 15% 0%;
+	padding: 0% 0% 0% 0%;
 }
 
 h1, h2, h3 {
-    font-family: 'PT Serif', serif;
-    font-weight: 700;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
     text-align: center;
     z-index: 2;
     position:relative;
 }
 
+.ig-container{
+	position: absolute;
+	top:0px;
+	left:-160px;
+	width:1276px;
+	height: 300px;
+}
+.ig-square{
+	display: inline-block;
+	float:left;
+	width:319px;
+	height: 319px;
+}
+
+#instafeed img{
+	display: inline-block;
+	width: 319px;
+	height: 319px;
+	float: left;
+	margin:0px;
+	padding: 0px;
+	opacity: 0.3;
+}
 header.band h3{
-	font-family: 'Merriweather', serif;
-	font-style: italic;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:300;
+	letter-spacing: 3px;
 	font-size: medium;
-	font-weight: 400;
+	font-size: 14px;
 }
  
 header.band h1 {
-	font-family: 'PT Serif', serif;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 10px;
+    margin-top: 4em;
+    font-weight: 700;
 	padding-top: 20px;
-	letter-spacing: 5px;
-    font-size: 2.5em;
-    font-style: italic;
+    font-size: 1.5em;
     line-height: 1em;
     margin-bottom: 1em;
     text-transform: uppercase;
@@ -46,11 +71,15 @@ header.band h1 {
 /*below is only enabled for screens larger than 767px; first breakpoint*/
 @media only screen and (min-width: 767px){
 	header.band.first{
-		background-image:url(../img/bwcover1.png);
+		height: 638px;
 		background-size: 100%;
-		padding: 17% 0 10% 0;
+		padding: 0% 0% 0% 0%;
+		margin: 0px;
 	}
+	header.container{
+	margin: 0px;
 
+	}
 	header.band.second{
 		background-image:url(../img/venusGIF.gif);
 		background-size: 100%;
@@ -60,7 +89,9 @@ header.band h1 {
 	}
 
 	header.band h1{
+		padding-top:250px;
 		font-size: 3.25em; 
+		margin-top: 0px;
 	}
 	.band.main #proj-title{
 		font-size: 4em;
@@ -270,4 +301,13 @@ a:hover{
 	width: 50%px;
 	margin: 0 auto;
 	text-decoration: none;
+}
+
+.footer-name{
+	font-family:'Oswald',sans-serif;
+	font-weight: 700;
+	font-size: 14;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	float:left;
 }
