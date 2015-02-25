@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>module 1</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html {font-family: 'Open Sans', sans-serif;}
+
+h2,h3,h4,h5,h6, p{padding:0px 0px 15px; margin:0;}
+.container {width:900px; margin: 0 auto;}
+.icon.nav  {list-style:none;margin:0;padding:0;}
+.icon.nav li {float:left; width: 50px; height:50px; margin: 0px 10px 0px 0px; background:#000; border-radius: 0%; text-align: center; display:block; line-height:46px;}
+.icon.nav li img {width:80%; height:80%; vertical-align: middle;}
+.icon.nav li.last{margin-right: 0px;}
+.container .content h2{margin: 5px 0;}
+.container .content .submodule { padding: 20px 0px; margin: 10px 0px 0px; background: grey; width: 100%; color: white;}
+.container .content .submodule .container {width: 95%; margin: 0 auto;}
+.container .content .submodule .container ul.tag-list { list-style: none; margin: 0; padding: 0; font-size: 12px;}
+.container .content .submodule .container ul.tag-list li { float:right; padding: 5px 15px; background: black; margin-right: 10px; border-radius: 13px; border-top:1px solid white;}
+.container .content .submodule .container ul.tag-list li.last{margin-right: 0px;}
+.clearfix:before,.clearfix:after {content:"";display:table;}
+.clearfix:after {clear:both;}
+.clearfix {zoom:1;}
+
+
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="content">
+			<h2 class="module-title">Module I Title</h2>
+			<ul class="icon nav clearfix">
+				<li id="icon-1"><img src="img/cne-logo.png"/></li>
+				<li id="icon-2"><img src="img/mcd-logo.png"/></li>
+				<li id="icon-3"><img src="img/tcdsb-logo.png"/></li>
+				<li id="icon-4"><img src="img/cibc-logo.png"/></li>
+				<li id="icon-5" class="last"><img src="img/klick-logo.png"/></li>
+			</ul>
+			<div class="submodule">
+				<div class="container">
+					<div class ="content-body">
+						<h3>Lorem Ipsum</h3>
+						<h4>Websum Devsem</h4>
+						<p>Next day, a large ship, the Rachel, was descried, bearing directly down upon the Pequod, all her spars thickly clustering with men.</p>
+					</div>
+					<div class="content-tags clearfix">
+						<ul class ="tag-list">
+							<li class="last">HTML</li>
+							<li>CSS</li>
+							<li>JS</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</script>
