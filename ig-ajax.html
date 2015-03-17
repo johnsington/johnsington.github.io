@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>module 1</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		function funcRef(){
+			if (location.hash == "#aaa")
+			{
+				console.log("true");
+			}
+			else
+			{
+				console.log(location.hash);
+			}
+
+		}
+		console.log(location);
+		window.onhashchange = funcRef();
+		$(document).ready(function(){
+			$("a").click(function(){
+				location.reload(true);
+			});
+		});
+	</script>
+</head>
+<body>
+<a href="#aaa">log in</a>
+<p id ="resp">result</p>
