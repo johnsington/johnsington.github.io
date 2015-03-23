@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 	//initial animations
-	setTimeout(function(){
+	$(window).load(function(){
+		setTimeout(function(){
 	    $(".element").typed({
 	        strings: [
 	        	"<b>multi-disciplinary<b>.^200",
@@ -13,6 +14,7 @@ $(document).ready(function(){
 	        startDelay: 500
 	    });
 	}, 500);
+	});
 	
 
 	if($(window).height()>600){
