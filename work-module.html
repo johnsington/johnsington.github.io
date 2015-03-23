@@ -7,44 +7,83 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Oswald:700,300);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
 
 html {font-family: 'Open Sans', sans-serif;}
 
-h2,h3,h4,h5,h6, p{padding:0px 0px 0px; margin:0;}
-h3 {font-family: 'Oswald', Arial, sans-serif; font-weight: 700; letter-spacing: 2px;}
-h4 {font-family: 'Oswald', Arial, sans-serif; font-weight: 300; text-transform: uppercase;}
-
-.title h3 { font-size: 28px; padding: 0;}
-.container {width:900px; margin: 0 auto;}
-.float-left {float:left;}
-.float-right {float: right;}
-
+h2,h3,h4,h5,h6, p{padding:0px 0px 15px; margin:0;}
+.container {width:1000px; margin: 0 auto;}
 .icon.nav  {list-style:none;margin:0;padding:0;}
 .icon.nav li, div.icon {float:left; width: 50px; height:50px; margin: 0px 10px 0px 0px; background:#000; border-radius: 0%; text-align: center; display:block; line-height:46px;}
 
 div.icon {width:65px;height:65px; line-height: 61px; border: 1px solid white; background: none;}
 div.icon img { width:80%; height:80%; vertical-align: middle;}
 .icon.nav li img {width:80%; height:80%; vertical-align: middle;}
-.icon.nav li.last{margin-right: 0px;}
-
-
 .container .content h2{margin: 5px 0;}
-.container .content p{padding: 0px 0px 15px;}
-.container .content .submodule { padding: 40px 0px; margin: 10px 0px; background: grey; width: 100%; color: white; background: url(img/cne-bg-bw.jpg); background-size: cover;}
-.container .content .submodule .container {width: 90%; margin: 0 auto;}
-.container .content .submodule .container ul.tag-list { list-style: none; margin: 0; padding: 0; font-size: 12px;}
-.container .content .submodule .container ul.tag-list li { float:right; padding: 5px 15px; background: none; margin-right: 10px; border-radius: 13px; border:1px solid white;}
-
-.container .content .submodule .container .header {padding: 0 0 15px;}
-.container .content .submodule .container ul.tag-list li.last{margin-right: 0px;}
+.container .content .submodule { padding: 20px 0px; margin: 10px 0px 0px; background: grey; width: 100%; color: white;}
+.container .content .submodule .container {width: 95%; margin: 0 auto;}
+ul.tag-list { list-style: none; margin: 0; padding: 0; font-size: 12px;}
+ul.tag-list li { float:right; padding: 2px 10px; background: black; margin-right: 5px; border-radius: 13px; }
+ul.tag-list li.last{margin-right: 0px;}
 .clearfix:before,.clearfix:after {content:"";display:table;}
 .clearfix:after {clear:both;}
 .clearfix {zoom:1;}
 
-#mcdonalds {background: #d44227;}
+.content .card{float: left; position: relative; width: 250px; height: 300px; margin: 10px 10px 0px 0px; padding: 0px 0 0; background: #000; overflow: hidden; background: linear-gradient(
+      rgba(0, 0, 0, 0.9), 
+      rgba(0, 0, 0, 0.45)
+    ), url(http://www20.imagesandwallpapers.com/img/monochrome_grayscale_landscape_nature_hd_city.jpg); background-size: cover;}
+.content .card .slider {cursor: pointer; padding: 77px 0 0; text-align: center; transition: all 0.4s; position: relative; top: 0; color: white;}
+.content .card .slider h3{padding: 0px 20px 10px; font-family: 'Oswald', sans-serif; font-weight: 400; letter-spacing: 1px; opacity: 1; color: #fff; transition: all 0.4s;}
+.content .card .slider em{opacity: 0; transition: all 0.2s; font-size: 14px;}
+.content .card .slider.hover {padding: 64px 0 0;}
+.content .card .slider.hover em{opacity: 1; transition: all 0.2s;}
+.content .card .slider.shiftup {cursor: default; top: -136px;}
+.content .card .desc.shiftup {top: 20px; transition: all 0.2s;}
+.content .card img {width:70px; height:70px; border: 1px solid white; margin: 0px 0px 15px;}
+.content .card .desc {position: relative; top: 90px; padding: 20px; font-size: 12px; line-height: 19px; text-align: left; background: red; transition: all 0.2s;}
+.content .card .desc ul.tag-list li {float:left;}
+
+.last, .card.last{margin-right: 0px;}
+.hide{display: none;}
 
 </style>
+<script>
+function cardInit(id){
+	$(id).on({
+		mouseover: function(){
+			$(this).addClass("hover");
+		},
+		mouseleave: function(){
+			if(!$(this).hasClass("shiftup")){
+				$(this).removeClass("hover");
+			}
+		},
+		click: function(){
+			//opens clicked card
+			if(!$(this).hasClass("shiftup")){
+				//resets all active cards
+				$(".slider").removeClass("shiftup");
+				$(".desc").removeClass("shiftup");
+				//opens active card
+				$(this).addClass("shiftup");
+				$(".desc", this).addClass("shiftup").css("height", $(".card").css("height"));
+			}
+			else{
+				$(this).removeClass("shiftup");
+				$(".desc", this).removeClass("shiftup");
+			}
+		}
+	});
+}
+
+$(document).ready(function(){
+	$(".slider").each(function(){
+		cardInit("#" + $(this).attr("id"));
+	});
+});	
+</script>
+
 </head>
 
 <body>
@@ -103,6 +142,59 @@ div.icon img { width:80%; height:80%; vertical-align: middle;}
 						</ul>
 					</div>
 				</div>
+			</div>
+			<div class="container clearfix">
+				<div class="card">
+					<div class="slider" id="slider">
+						<img src="img/cne-logo.png"/>
+						<h3>THE EX</h3>
+						<em>Buildings Attendant</em>
+						<div class="desc">
+							<p>Next day, a large ship, the Rachel, was descried, bearing directly down upon the Pequod, all her spars thickly clustering with men.</p>
+							<div class="content-tags">
+								<ul class ="tag-list">
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>JS</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card">
+					<div class="slider" id="slider1">
+						<img src="img/tcdsb-logo.png"/>
+						<h3>TCDSB</h3>
+						<em>Focus on Youth<br>Summer Camp Counsellor</em>
+						<div class="desc">
+							<p>Next day, a large ship, the Rachel, was descried, bearing directly down upon the Pequod, all her spars thickly clustering with men.</p>
+							<div class="content-tags">
+								<ul class ="tag-list">
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>JS</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card last">
+					<div class="slider" id="slider2">
+						<img src="img/mcd-logo.png"/>
+						<h3>McDONALD'S</h3>
+						<em>Crew Member</em>
+						<div class="desc">
+							<p>Next day, a large ship, the Rachel, was descried, bearing directly down upon the Pequod, all her spars thickly clustering with men.</p>
+							<div class="content-tags">
+								<ul class ="tag-list">
+									<li>HTML</li>
+									<li>CSS</li>
+									<li>JS</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>		
 			</div>
 		</div>
 	</div>
