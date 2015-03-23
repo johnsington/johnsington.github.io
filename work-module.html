@@ -7,25 +7,42 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,300);
 
 html {font-family: 'Open Sans', sans-serif;}
 
-h2,h3,h4,h5,h6, p{padding:0px 0px 15px; margin:0;}
+h2,h3,h4,h5,h6, p{padding:0px 0px 0px; margin:0;}
+h3 {font-family: 'Oswald', Arial, sans-serif; font-weight: 700; letter-spacing: 2px;}
+h4 {font-family: 'Oswald', Arial, sans-serif; font-weight: 300; text-transform: uppercase;}
+
+.title h3 { font-size: 28px; padding: 0;}
 .container {width:900px; margin: 0 auto;}
+.float-left {float:left;}
+.float-right {float: right;}
+
 .icon.nav  {list-style:none;margin:0;padding:0;}
-.icon.nav li {float:left; width: 50px; height:50px; margin: 0px 10px 0px 0px; background:#000; border-radius: 0%; text-align: center; display:block; line-height:46px;}
+.icon.nav li, div.icon {float:left; width: 50px; height:50px; margin: 0px 10px 0px 0px; background:#000; border-radius: 0%; text-align: center; display:block; line-height:46px;}
+
+div.icon {width:65px;height:65px; line-height: 61px; border: 1px solid white; background: none;}
+div.icon img { width:80%; height:80%; vertical-align: middle;}
 .icon.nav li img {width:80%; height:80%; vertical-align: middle;}
 .icon.nav li.last{margin-right: 0px;}
+
+
 .container .content h2{margin: 5px 0;}
-.container .content .submodule { padding: 20px 0px; margin: 10px 0px 0px; background: grey; width: 100%; color: white;}
-.container .content .submodule .container {width: 95%; margin: 0 auto;}
+.container .content p{padding: 0px 0px 15px;}
+.container .content .submodule { padding: 40px 0px; margin: 10px 0px; background: grey; width: 100%; color: white; background: url(img/cne-bg-bw.jpg); background-size: cover;}
+.container .content .submodule .container {width: 90%; margin: 0 auto;}
 .container .content .submodule .container ul.tag-list { list-style: none; margin: 0; padding: 0; font-size: 12px;}
-.container .content .submodule .container ul.tag-list li { float:right; padding: 5px 15px; background: black; margin-right: 10px; border-radius: 13px; border-top:1px solid white;}
+.container .content .submodule .container ul.tag-list li { float:right; padding: 5px 15px; background: none; margin-right: 10px; border-radius: 13px; border:1px solid white;}
+
+.container .content .submodule .container .header {padding: 0 0 15px;}
 .container .content .submodule .container ul.tag-list li.last{margin-right: 0px;}
 .clearfix:before,.clearfix:after {content:"";display:table;}
 .clearfix:after {clear:both;}
 .clearfix {zoom:1;}
 
+#mcdonalds {background: #d44227;}
 
 </style>
 </head>
@@ -43,16 +60,46 @@ h2,h3,h4,h5,h6, p{padding:0px 0px 15px; margin:0;}
 			</ul>
 			<div class="submodule">
 				<div class="container">
-					<div class ="content-body">
-						<h3>Lorem Ipsum</h3>
-						<h4>Websum Devsem</h4>
-						<p>Next day, a large ship, the Rachel, was descried, bearing directly down upon the Pequod, all her spars thickly clustering with men.</p>
+					<div class="content-body">
+						<div class ="clearfix header">
+							<div class ="icon">
+								<img src="img/cne-logo.png"/>
+							</div>
+							<div class ="title float-left">
+								<h3>CANADIAN NATIONAL EXHBITION</h3>
+								<h4>Building Attendant</h4>
+							</div>
+						</div>
+						<p>This was my first professional job experience where I performed janitorial duties along the Direct Energy Centre corridor.</p>
 					</div>
 					<div class="content-tags clearfix">
 						<ul class ="tag-list">
-							<li class="last">HTML</li>
-							<li>CSS</li>
-							<li>JS</li>
+							<li class="last">Cleaning</li>
+							<li>Janitorial</li>
+							<li>Customer Service</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="submodule" id="mcdonalds">
+				<div class="container">
+					<div class="content-body">
+						<div class ="clearfix header">
+							<div class ="icon">
+								<img src="img/mcd-logo.png"/>
+							</div>
+							<div class ="title float-left">
+								<h3>McDONALD'S</h3>
+								<h4>Crew Member</h4>
+							</div>
+						</div>
+						<p>As a part-time job during high school, working as a cashier taught me exceptional customer service experience and challenged me to adapt to the conditions of a busy, fast-paced business.</p>
+					</div>
+					<div class="content-tags clearfix">
+						<ul class ="tag-list">
+							<li class="last">Cleaning</li>
+							<li>Food and Beverage</li>
+							<li>Customer Service</li>
 						</ul>
 					</div>
 				</div>

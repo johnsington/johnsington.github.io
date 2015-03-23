@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="gallery">
+	<head>
+		<title>Potato Gallery</title>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<script type="text/javascript" src ="js/angular.min.js"></script>
+		<script type="text/javascript" src ="js/galleryapp.js"></script>
+		<div class="band">
+			<div = "container">
+				<div = "columns ten offset-by-three">
+					<h1 id="proj-title">Potato Gallery</h1>
+					<p id="proj-caption">Here are a collection of my potatoes.</p>
+					<hr width="50%">
+				</div><!--columns ten offset by three-->
+			</div><!--container-->
+		</div><!--band-->
+		<div class="band" ng-controller="GalController as gallery">
+			<div class= "container">
+				<div class= "columns sixteen">
+					<div class ="gal-item" ng-repeat = "item in gallery.items">
+					<h2>{{item.name}}</h2>
+					<p align="center">{{item.description}}</p>
+					</div>
+				</div><!--columns sixteen-->
+			</div><!--cont-->
+		</div><!--band-->
+
+	</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>JOHNSINGTON</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src= "js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src= "js/jquery.scrollupmenu.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <!--script for scroll up header-->
+    <script type="text/javascript">
+        $(function() {
+            $('#top').scrollUpMenu();
+        });
+    </script>
+
+</head>
+
+<body>
+
+<!--Look up what fluid_skeleton.css does-->
+<!--menu header-->
+<div class="band main">
+    <div id="top">
+        <ul class = "menu">
+            <li><p id="menutitle">JOHNSINGTON</p></li>
+            <li><a class="menu-button" href="http://johnsington.github.io">Home</a></li>
+            <li><a class="menu-button" href="res/John Salaveria - 2A Resume Condensed.pdf">Resume</a></li>
+            <li><a class="menu-button" href="projects.html">Projects</a></li>
+            <li><a class="menu-button" href="visual/visual-index.html">Visual</a></li>
+            <li><a class="menu-button" href="https://medium.com/@jjsalaveria">Blog</a></li>
+        </ul>
+    </div>
+</div>
+
+<header class="band first" 
+    data-0="background-position:0px 0px;"
+    data-end="background-position:0px -50px;">
+
+    <!--SITE COVER-->
+    <div class="container no-margin">
+ 
+        <div class="columns sixteen">
+        <div class="ig-container" id="instafeed">
+            <!-- <div class="ig-square">square
+            </div> -->
+        </div>
+         	<h1>JOHN SALAVERIA</h1>
+            <h3>Software engineering student, multimedia and web designer.</h3>
+ 
+        </div><!--/ columns--> 
+     
+    </div><!--/ container-->       
+ 
+</header><!--/ band-->
+ 
+<div class="band main">
+ 
+    <div class="container">
+         
+        <div class="columns twelve offset-by-two">            
+         	<h2>About me.</h2>
+                 
+			<p>
+
+            <strong>Hi I'm John, and I'm more than an engineering student. 
+            </strong>
+            Apart from generating compile errors and writing proofs, I take part in a variety of Waterloo clubs and societies such as the<a href= "https://uwaterloo.ca/engineering-student-ambassadors/people-profiles/john-salaveria">Engineering Ambassadors</a> and<a href="https://www.facebook.com/uwstylesoc/posts/750218771738727">Style Society</a>. I juggle a class act of being a thrifted<a href="http://johnsington.tumblr.com/">style blogger</a>,<a href="http://open.spotify.com/user/12159397068">prolific indie music connossieur</a>, and gym junkie all at the same time. You can also catch me doing improv piano covers with my friends in coffee houses around campus. You may also find me caffeine-wired in 24-hour hackathons working on yet another copy of Instagram. I'm from the Philippines, but I've also lived in the US for most of my life before my rocket crashlanded into Canada. </p>
+        </div><!--/ column-->
+ 
+    </div><!--/ container-->
+ 
+</div><!--/ main-->
+<hr width="75%">
+<footer class="band main">
+    <div class="container">
+        <div class="columns eight">
+            <p class="footer-name">John Salaveria</p>
+            <p> | updated Jan 2015.</p>
+        </div>
+        <div class="columns eight last">
+            <p>
+            <a href="http://instagram.com/johnsington">Instagram</a>
+            <a href="https://www.facebook.com/johnsington">Facebook</a>
+            <a href="https://github.com/johnsington">Github</a>
+            </p>
+        </div>
+    </div>
+</footer>
+<!--skrollr.js needs to be loaded before used-->
+<!-- <script type="text/javascript" src="js/skrollr.js"></script> -->
+
+<!--now initiate skroller-->
+<!--script type="text/javascript">
+    // skrollr.init({
+    //     forceHeight: false
+    // });
+    <!--/script>
+
+<!--for instafeed header-->
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: 18354893,
+        accessToken: '18354893.467ede5.563b7e18e72c426d884e113eb31875b8',
+        template: '<img src="http:{{image}}"/>',
+        resolution: 'standard_resolution'
+    });
+    feed.run();
+</script>
+</body>
+
+</html>

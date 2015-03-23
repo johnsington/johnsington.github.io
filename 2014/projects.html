@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src= "js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src= "js/jquery.scrollupmenu.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>JOHNSINGTON: Projects</title>
+
+    <!--script for scroll up header-->
+    <script type="text/javascript">
+        $(function() {
+            $('#top').scrollUpMenu();
+        });
+    </script>
+</head>
+
+<body>
+	<div class="band main">
+	    <div id="top">
+	        <ul class = "menu">
+	            <li><p id="menutitle">JOHNSINGTON</p></li>
+	            <li><a class="menu-button" href="http://johnsington.github.io">Home</a></li>
+	            <li><a class="menu-button" href="res/John Salaveria - 2A Resume Condensed.pdf">Resume</a></li>
+	           	<li><a class="menu-button" href="project.html">Projects</a></li>
+	           	<li><a class="menu-button" href="visual/visual-index.html">Visual</a></li>
+	            <li><a class="menu-button" href="https://medium.com/@jjsalaveria">Blog</a></li>
+	        </ul>
+	    </div>
+	</div>
+
+	<div class="band main firstdiv" id="band-proj">
+		<div class="container">
+			<div class="columns twelve offset-by-two">
+			<h1 id="proj-title">Projects</h1>
+			<p id="proj-caption">Here are few things I've worked on, both software and non-software.</p>
+
+			<!--columns-->
+			</div>
+		<!--container-->
+		</div>
+	<!--band main-->
+	</div>
+	<div = class="band">
+		<div class="container">
+			<div class="columns twelve offset-by-two">
+			<div class="projectContainer">
+				<span class="projectImageCont">
+					<a href= "ThreadSwap/index.html" class ="fillSpan">
+					<img class="projectImage" id="projimage1"src=""></img>
+					</a>
+				</span>
+				<div class="projectText">
+				<h2>ThreadSwap for Web</h2>
+				<p>A basic online fashion classifieds built on the Web with a focus on implementing AngularJS to improve front-end development. <a href="ThreadSwap/index.html">link</a></p>
+				</div>
+			</div>
+			<div class="projectContainer">
+				<div class="projectImageCont" id="noFloat">
+					<a href= "https://github.com/dinahshi/MyDay" class ="fillSpan">
+					<img class="projectImage" id="projimage2"src=""></img>
+					</a>
+				</div>
+				<div class="projectText">
+				<h2>MyDay for Android</h2>
+				<p>A personal photojournal that displays a feed of picture posts for the user, like a baby Instagram. I was in charge of designing the Activity GUI's using XML and Java.<a href="https://github.com/dinahshi/MyDay">link</a></p>
+				</div>
+			</div>
+			<div class="projectContainer">
+				<div class="projectImageCont" id="noFloat">
+					<a href= "sayWAT/watmain.html" class ="fillSpan">
+					<img class="projectImage" id="projimage3"src=""></img>
+					</a>
+				</div>
+				<div class="projectText">
+				<h2>sayWAT for Web</h2>
+				<p>A web experiment that communicates with the Parse API to save Post objects and display them on a feed. The result is an anonymous quote wall.<a href="sayWAT/watmain.html">link</a></p>
+				</div>
+			</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
