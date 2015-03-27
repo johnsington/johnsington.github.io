@@ -22,13 +22,18 @@ function getAccessToken(){
 	if (location.hash)
 	{
 		var access_token = location.hash.substring(14);
+		console.log(access_token);
+		return access_token;
 	}
 	else
 	{
-		console.log(location.hash);
+		//no access token
+		return false;
 	}
 
 }
+
+
 console.log(location);
 window.onhashchange = getAccessToken();
 
