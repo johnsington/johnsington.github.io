@@ -21,8 +21,8 @@ function authenticateUser(){
 	window.location.href = authenticate_url;
 }
 
-function main(){
-	var access_token = "";
+function updatePage(){
+var access_token = "";
 	//gets access token from URL after hash changes
 	if (location.hash)
 	{
@@ -30,7 +30,9 @@ function main(){
 	}
 	else
 	{
-		//no access token
+		//offline testing
+		// access_token = testUser;
+		//no access token, stops update
 		return false;
 	}
 
@@ -38,14 +40,31 @@ function main(){
 		function(data){
 			console.log('here');
 			var likes = countLikes(data);
-			$('#resp').text(likes + " likes");
+			//sets total likes
+			$('#resp').text(likes);
+			$('#count').text("count again");
+			//sets user image
+			getUserProfile(access_token, function(data){
+				var userPhotoURL = data.data.profile_picture;
+				$('#userPhoto').attr('src', userPhotoURL);
+				centerHeader();
+			})
 		});
 
 }
 
+function getUserProfile(token, callback){
+	console.log('entered getUserProfile');
+	json("https://api.instagram.com/v1/users/self/?access_token="
+			+ token,
+		function(data){
+			console.log(data);
+			callback(data);
+		}
+		)
+}
 //returns Object of photos
 function getUserPhotos(token, callback){
-	// token = testUser;
 	console.log('entered getUserPhotos');
 	json("https://api.instagram.com/v1/users/self/media/recent/?access_token="
 			+ token,
@@ -68,10 +87,21 @@ function countLikes(data){
 }
 
 console.log(location);
-window.onhashchange = main();
+
+function centerHeader(){
+	var centerHeight = $(window).height() / 2 - $("header").height() / 2;
+	$("header").css("margin-top", centerHeight);
+}
 
 $(document).ready(function(){
-	$("a").click(function(){
-		authenticateUser();
+	window.onhashchange = updatePage();
+	centerHeader();
+
+	$('#count').click(function(){
+		updatePage();
+	});
+
+	$(window).resize(function(){
+		centerHeader();
 	});
 });
