@@ -98,7 +98,12 @@ $(document).ready(function(){
 	centerHeader();
 
 	$('#count').click(function(){
-		authenticateUser();
+		if (location.hash){
+			updatePage();
+		}
+		else{
+			authenticateUser();
+		}
 	});
 
 	$(window).resize(function(){
