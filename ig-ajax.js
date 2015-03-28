@@ -98,7 +98,7 @@ $(document).ready(function(){
 	centerHeader();
 
 	$('#count').click(function(){
-		updatePage();
+		authenticateUser();
 	});
 
 	$(window).resize(function(){
