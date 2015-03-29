@@ -31,9 +31,9 @@ var access_token = "";
 	else
 	{
 		//offline testing
-		// access_token = testUser;
+		access_token = testUser;
 		//no access token, stops update
-		return false;
+		// return false;
 	}
 
 	getUserPhotos(access_token, 
@@ -45,8 +45,26 @@ var access_token = "";
 			$('#count').text("count again");
 			//sets user image
 			getUserProfile(access_token, function(data){
+				//set background of posts using Instafeed
+				var feed = new Instafeed({
+			        get: 'user',
+			        userId: parseInt(data.data.id),
+			        accessToken: access_token,
+			        template: '<img src="{{image}}"/>',
+			        resolution: 'standard_resolution'
+			    });
+
 				var userPhotoURL = data.data.profile_picture;
+
+				//populates background with IG photos
+				feed.run();
+				$(".instafeed, .overlay").height($(window).height());
+				$(".instafeed img").height($(".instafeed img").innerWidth());
+
+				//updates user photo
 				$('#userPhoto').attr('src', userPhotoURL);
+
+
 				centerHeader();
 			})
 		});
@@ -91,12 +109,29 @@ console.log(location);
 function centerHeader(){
 	var centerHeight = $(window).height() / 2 - $("header").height() / 2;
 	$("header").css("margin-top", centerHeight);
+	$(".instafeed, .overlay").height($(window).height());
+	$(".instafeed img").height($(".instafeed img").innerWidth());
 }
 
 $(document).ready(function(){
+
 	window.onhashchange = updatePage();
 	centerHeader();
 
+	//initial animations
+	$(window).load(function(){
+		setTimeout(function(){
+	    $(".element").typed({
+	        strings: [
+	        	"Let me count all your #instalikes.^200",
+	        	"#instakarma"
+	        	],
+	        startDelay: 500
+	    });
+	}, 500);
+	});
+
+	//when the main button is pressed
 	$('#count').click(function(){
 		if (location.hash){
 			updatePage();
