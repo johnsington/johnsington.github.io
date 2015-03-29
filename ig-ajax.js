@@ -56,11 +56,16 @@ var access_token = "";
 
 				var userPhotoURL = data.data.profile_picture;
 
-				//populates background with IG photos
-				$('.instafeed').css("background", "#000");
+				//populates background with IG photos,timeOut to handle loading
+				$('.instafeed').fadeIn(500).css("background", "#000");
+
 				feed.run();
 				$(".instafeed, .overlay").height($(window).height());
-				$(".instafeed img").height($(".instafeed img").innerWidth());
+
+				
+				setTimeout(function(){
+					$(".instafeed img").height($(".instafeed img").innerWidth()).fadeIn(500);
+				},1000);
 
 				//updates and shows user photo
 				$('#userPhoto').attr('src', userPhotoURL).show();
@@ -151,4 +156,31 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		centerHeader();
 	});
+
+
 });
+
+//loads images nicely,
+(function ($) {
+
+    $.fn.loadNicely = function (options) {
+
+        var defaults = {
+            preLoad: function (img) { },
+            onLoad: function (img) { $(img).fadeIn(200); }
+        };
+
+        var options = $.extend(defaults, options);
+
+        return this.each(function () {
+
+            if (!this.complete) {
+                options.preLoad(this);
+                $(this).load(function () { options.onLoad(this); }).attr("src", this.src);
+            }
+            else {
+                options.onLoad(this);
+            }
+        });
+    };
+})(jQuery);
