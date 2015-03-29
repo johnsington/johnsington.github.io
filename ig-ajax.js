@@ -43,7 +43,7 @@ var access_token = "";
 			//sets total likes
 			$('#resp').text(likes);
 			$('#count').text("count again");
-			//sets user image
+			
 			getUserProfile(access_token, function(data){
 				//set background of posts using Instafeed
 				var feed = new Instafeed({
@@ -57,12 +57,17 @@ var access_token = "";
 				var userPhotoURL = data.data.profile_picture;
 
 				//populates background with IG photos
+				$('.instafeed').css("background", "#000");
 				feed.run();
 				$(".instafeed, .overlay").height($(window).height());
 				$(".instafeed img").height($(".instafeed img").innerWidth());
 
-				//updates user photo
-				$('#userPhoto').attr('src', userPhotoURL);
+				//updates and shows user photo
+				$('#userPhoto').attr('src', userPhotoURL).show();
+				//shows likes
+				$('header div, .callout-tip').show();
+				//hides typed.js title
+				$('.element').hide();
 
 
 				centerHeader();
@@ -108,7 +113,9 @@ console.log(location);
 
 function centerHeader(){
 	var centerHeight = $(window).height() / 2 - $("header").height() / 2;
+	var centerTitleHeight = $(window).height() / 2 - $(".element").height() / 2 - 20;
 	$("header").css("margin-top", centerHeight);
+	$(".element").css("top", centerTitleHeight);
 	$(".instafeed, .overlay").height($(window).height());
 	$(".instafeed img").height($(".instafeed img").innerWidth());
 }
