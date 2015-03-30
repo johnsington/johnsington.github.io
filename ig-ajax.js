@@ -31,9 +31,9 @@ var access_token = "";
 	else
 	{
 		//offline testing: COMMENT LINE BEFORE COMMITTING
-		access_token = testUser;
+		// access_token = testUser;
 		//no access token, stops update
-		// return false;
+		return false;
 	}
 
 	getUserPhotos(access_token, 
