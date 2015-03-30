@@ -31,9 +31,9 @@ var access_token = "";
 	else
 	{
 		//offline testing: COMMENT LINE BEFORE COMMITTING
-		// access_token = testUser;
+		access_token = testUser;
 		//no access token, stops update
-		return false;
+		// return false;
 	}
 
 	getUserPhotos(access_token, 
@@ -42,7 +42,7 @@ var access_token = "";
 			var likes = countLikes(data);
 			//sets total likes
 			$('#resp').text(likes);
-			$('#count').text("count again");
+			$('#count').text("COUNT AGAIN");
 			
 			getUserProfile(access_token, function(data){
 				//set background of posts using Instafeed
@@ -62,7 +62,7 @@ var access_token = "";
 				feed.run();
 				$(".instafeed, .overlay").height($(window).height());
 
-				
+
 				setTimeout(function(){
 					$(".instafeed img").height($(".instafeed img").innerWidth()).fadeIn(500);
 				},1000);
@@ -120,7 +120,7 @@ function centerHeader(){
 	var centerHeight = $(window).height() / 2 - $("header").height() / 2;
 	var centerTitleHeight = $(window).height() / 2 - $(".element").height() / 2 - 20;
 	$("header").css("margin-top", centerHeight);
-	$(".element").css("top", centerTitleHeight);
+	$(".element").css("margin-top", centerTitleHeight);
 	$(".instafeed, .overlay").height($(window).height());
 	$(".instafeed img").height($(".instafeed img").innerWidth());
 }

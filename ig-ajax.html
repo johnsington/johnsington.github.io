@@ -26,7 +26,7 @@ button {font-family:'Khula', Arial, sans-serif; background:#517fa4; padding: 10p
 button:hover{background: #3b5c77;}
 
 .overlay {background:url(img/overlay-w.png); position: absolute; top:0; left:0; width:100%; z-index:-1;}
-.element{position:absolute; z-index:2; top: 150px; text-align: center; width:100%;}
+.element{position:absolute; z-index:2; text-align: center; width:100%;}
 
 .instafeed {position: absolute; top:0; left:0; width:100%; z-index:-2; background:url(img/igkarma_bg.jpg); background-size:cover; overflow:hidden;}
 .instafeed img{width:25%; opacity:0.5; float:left; display:none;}
@@ -39,6 +39,18 @@ button:hover{background: #3b5c77;}
 
 .bottom-nav{text-align: center; color:#bbb; font-size: 14px; width: 100%; position:absolute; bottom:0px; font-weight: 400; padding: 5px 0px}
 
+/*for mobile displays*/
+@media (max-width: 768px) {
+	.content{ width:100%;}
+	.element{top: -50px;}
+	.instafeed img {width:50%;}
+	.bottom-nav{font-size: 8px;}
+}
+
+/*for iPad portrait*/
+@media (min-width:769px) and (max-width:1024px){
+	.content {width:768px;}
+}
 .bounce {
 	-webkit-animation-name: bounce;
 	-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
