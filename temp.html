@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="site.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="scripts/handlebars-v3.0.1.js"></script>
     <script src="scripts/typed.js"></script>
     <script src="site.js"></script>
 	<title>John Salaveria</title>
@@ -30,7 +31,91 @@
             <span>I am </span><span class="element"></span>
         </div>
     </header>
-        
+    <div class="content">
+        <section>
+            <h1>I write and study code.</h1>
+            <p><strong>As a software engineering student from the University of Waterloo</strong>, my studies extend from basic algorithms and syntax to uncovering the very foundation of computers themselves. Exploring the applications and science behind computing have impactfully changed my perspective on the simplest electronics we interact with everyday, and wielding the ability to create real-world solutions from lines of code remains to be the very thrilling idea that drives me to program.
+            </p>
+            <p>Apart from generating compile errors and writing proofs, I take part in a variety of Waterloo clubs and societies such as the <a href= "https://uwaterloo.ca/engineering-student-ambassadors/people-profiles/john-salaveria">Engineering Ambassadors</a> and <a href="https://www.facebook.com/uwstylesoc/posts/750218771738727">Style Society</a>. I juggle a class act of being a thrifted <a href="http://johnsington.tumblr.com/">style blogger</a>, <a href="http://open.spotify.com/user/12159397068">prolific indie music connossieur</a>, and gym junkie all at the same time. You can also catch me doing improv piano covers with my friends in coffee houses around campus. You may also find me caffeine-wired in 24-hour hackathons working on yet another copy of Instagram. I'm from the Philippines, but I've also lived in the US for most of my life before my rocket crashlanded into Canada.</p>
+        </section>
+        <section class="work">
+            <h2 class="text-center">Where I've worked</h2>
+            <div class="work-container">
+                    <div class="card" id="klick">
+                        <div class="slider" id="c1">
+                            <img src="img/klick-logo.png"/>
+                            <h3>KLICK HEALTH</h3>
+                            <em>Front End Web Developer</em>
+                            <div class="desc">
+                                <p>I pushed a garbage cart inside the Direct Energy Centre for 8 hours a day for 15 days.</p>
+                                <div class="content-tags">
+                                    <ul class ="tag-list">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="underlay klick"></div>
+                    </div> <!--end of card-->
+                    <div class="card" id="cibc">
+                        <div class="slider" id="c2">
+                            <img src="img/cibc-logo.png"/>
+                            <h3>CIBC</h3>
+                            <em>Quality Assurance Analyst</em>
+                            <div class="desc">
+                                <p>I pushed a garbage cart inside the Direct Energy Centre for 8 hours a day for 15 days.</p>
+                                <div class="content-tags">
+                                    <ul class ="tag-list">
+                                        <li>Customer Service</li>
+                                        <li>Food Service</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="underlay cibc"></div>
+                    </div> <!--end of card-->
+                    <div class="card">
+                        <div class="slider" id="c3">
+                            <img src="img/mcd-logo.png"/>
+                            <h3>McDONALD'S</h3>
+                            <em>Crew Member</em>
+                            <div class="desc">
+                                <p>I pushed a garbage cart inside the Direct Energy Centre for 8 hours a day for 15 days.</p>
+                                <div class="content-tags">
+                                    <ul class ="tag-list">
+                                        <li>Customer Service</li>
+                                        <li>Food Service</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="underlay mcd"></div>
+                    </div> <!--end of card-->
+                    <div class="card">
+                        <div class="slider" id="c4">
+                            <img src="img/tcdsb-logo.png"/>
+                            <h3>TCDSB</h3>
+                            <em>
+                                Focus on Youth<br/>
+                                Summer Camp Counsellor
+                            </em>
+                            <div class="desc">
+                                <p>I pushed a garbage cart inside the Direct Energy Centre for 8 hours a day for 15 days.</p>
+                                <div class="content-tags">
+                                    <ul class ="tag-list">
+                                        <li>Customer Service</li>
+                                        <li>Food Service</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="underlay tcdsb"></div>
+                    </div> <!--end of card-->
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
