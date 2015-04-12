@@ -59,7 +59,11 @@ $(document).ready(function(){
 	// $(".slider").each(function(){
 	// 	cardInit("#" + $(this).attr("id"));
 	// });
-
+	$('.phone').slick({
+		autoplay: true,
+		autoplaySpeed: 3000,
+		arrows:false
+	 });
 	//resizes landing to fit web client height
 	$(window).resize(function(){
 		resizeLanding();

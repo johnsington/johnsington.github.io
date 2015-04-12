@@ -1,3 +1,4 @@
+/*responsive grid system*/
 @import "skeleton";
 
 /*----FONT FAMS----*/
@@ -5,7 +6,7 @@
 
 /*----CSS RESET----*/
 body{margin: 0; padding: 0; font-family: 'Source Sans Pro', sans-serif;}
-h1,h2 {margin: 0; padding: 0 0 15px; font-size:40px;}
+h1,h2 {margin: 0; padding: 0 0 15px; font-size:40px;line-height: 43px;}
 h3{margin:0; padding: 0; font-weight: bold;}
 p {margin: 0; font-size: 20px; line-height: 25px; font-weight: 300; padding: 0 0 15px;}
 a {text-decoration: none; font-weight: 600; color:black;}
@@ -14,6 +15,7 @@ strong {font-weight: 600;}
 
 /*----UTILITIES and VARIABLES----*/
 $logo: 100px;
+$logo-mobile:50px;
 $desktop-width: 900px;
 
 @mixin flex(){
@@ -35,6 +37,12 @@ $desktop-width: 900px;
     background-size: cover;
 }
 
+@mixin skewY($deg){
+    -ms-transform: skewY($deg); /* IE 9 */
+    -webkit-transform: skewY($deg); /* Safari */
+    transform: skewY($deg);
+}
+
 .pull-left{float:left;}
 .pull-right{float:right;}
 .text-center{text-align: center;}
@@ -43,19 +51,18 @@ $desktop-width: 900px;
 .clearfix:before,.clearfix:after {content:"";display:table;}
 .clearfix:after {clear:both;}
 .clearfix {zoom:1;}
+.hidden-mobile{display:none;}
 
 /*-----HEADER-----*/
 header {
     width:100%;
-    min-height: 100%;
     color:white;
     letter-spacing: 3px;
     font-size:20px;
     font-family:'Source Sans Pro', san-serif;
     font-weight: 600;
-    background: url(img/garden-bg-2-2.jpg);
+    background: url(../img/garden-bg-2-2.jpg);
     background-size: cover;
-    line-height:$logo + 25px;
     .overlay{
         width:100%;
         height:100%;
@@ -63,7 +70,7 @@ header {
         top:0px;
         left:0px;
         z-index:1;
-        background: url(img/overlay-w.png) repeat;
+        background: url(../img/overlay-w.png) repeat;
     }
     .top-nav div h1{
         font-size: 20px;
@@ -72,19 +79,23 @@ header {
     .top-nav{
         position:relative;
         top:60px;
-        width: $desktop-width;
+        width:100%;
         margin: 0 auto;
         z-index: 10;
+        div{
+            width:100%;
+            text-align: center;
+        }
     }
     .title{
-        padding-top: 90px;
+        padding-top: 50px;
         span{
-            font-size: 50px;
+            font-size: 30px;
             font-weight: 200;
         }
         font-weight:200;
         position:relative;
-        width:$desktop-width;
+        width:90%;
         margin:0 auto;
         text-align: center;
         z-index:10;
@@ -92,19 +103,21 @@ header {
 }
 
 img.square-logo{
-    width:$logo - 40px;
-    height:$logo - 40px;
-    padding:25px;
+    width:$logo-mobile;
+    height:$logo-mobile;
+    padding:15px;
     border: 3px solid #fff;
 }
 ul.menu{
     list-style-type: none;
     margin:0;
+    display:inline-block;
 }
 
 .top-nav .menu li{
     float: left;
-    padding: 0 50px 0 0;
+    padding: 0 10px 0 0;
+    line-height: 53px;
 }
 
 .menu li.last{
@@ -117,7 +130,37 @@ ul.menu{
     padding-top: 20px;
 }
 section{
-    padding: 20px 0;
+    padding: 25px 0;
+}
+
+/*HEADER for desktop*/
+@media (min-width: 920px) {
+    img.square-logo{
+        width:$logo - 40px;
+        height:$logo - 40px;
+        padding:25px;
+    }
+    header{
+        line-height:$logo + 25px;
+        .top-nav{
+            width: $desktop-width;
+            div{
+                width:auto;
+            }
+            .menu li{
+                padding: 0 50px 0 0;
+                line-height: 125px;
+            }
+        }
+        .title{
+            padding-top: 90px;
+            span{
+                font-size: 50px;
+                font-weight: 200;
+            }
+            width:$desktop-width;
+        }
+    }
 }
 
 /*work module containers*/
@@ -128,17 +171,17 @@ ul.tag-list li { float:right; padding: 2px 10px; background: black; margin-right
 ul.tag-list li.last{margin-right: 0px;}
 
 .work-container{
-    @include flex();
-    justify-content: space-between;
+    display:block;
 }
-.content .card{
+
+.work .card{
     position: relative;
-    width: 215px;
+    width: 100%;
     height: 215px;
     margin: 10px 10px 0px 0px;
     padding: 0px 0 0; 
     overflow: hidden; 
-    background: url("img/overlay-w.png");
+    background: url(../img/overlay-w.png);
     .underlay{
         z-index:-1;
         width:100%;
@@ -146,7 +189,7 @@ ul.tag-list li.last{margin-right: 0px;}
         position: absolute;
         top:0;
         left:0;
-        background: url(img/garden-bg-2-2.jpg);
+        background: url(../img/garden-bg-2-2.jpg);
         &.cibc{
             background-position: -145px -410px;
         }
@@ -158,19 +201,62 @@ ul.tag-list li.last{margin-right: 0px;}
         }
     }
 }
-.content .card .slider {cursor: pointer; padding: 50px 0 0; text-align: center; transition: all 0.4s; position: relative; top: 0; color: white;}
-.content .card .slider h3{padding: 0px 20px 10px; font-size: 20px; letter-spacing: 1px; opacity: 1; color: #fff; transition: all 0.4s;}
-.content .card .slider em{opacity: 0; transition: all 0.2s; font-size: 14px;}
-.content .card .slider.hover {padding: 64px 0 0;}
-.content .card .slider.hover em{opacity: 1; transition: all 0.2s;}
-.content .card .slider.shiftup {cursor: default; top: -136px;}
-.content .card .desc.shiftup {top: 20px; transition: all 0.2s;}
-.content .card img {width:70px; height:70px; border: 1px solid white; margin: 0px 0px 15px;}
-.content .card .desc {position: relative; top: 90px; padding: 20px; font-size: 12px; line-height: 19px; text-align: left; background: red; transition: all 0.2s;}
-.content .card .desc ul.tag-list li {float:left;}
-.content .card p {font-size:14px;}
+
+.work .card .slider {cursor: pointer; padding: 50px 0 0; text-align: center; transition: all 0.4s; position: relative; top: 0; color: white;}
+.work .card .slider h3{padding: 0px 20px 10px; font-size: 20px; letter-spacing: 1px; opacity: 1; color: #fff; transition: all 0.4s;}
+.work .card .slider em{opacity: 0; transition: all 0.2s; font-size: 14px;}
+.work .card .slider.hover {padding: 64px 0 0;}
+.work .card .slider.hover em{opacity: 1; transition: all 0.2s;}
+.work .card .slider.shiftup {cursor: default; top: -136px;}
+.work .card .desc.shiftup {top: 20px; transition: all 0.2s;}
+.work .card img {width:70px; height:70px; border: 1px solid white; margin: 0px 0px 15px;}
+.work .card .desc {position: relative; top: 90px; padding: 20px; font-size: 12px; line-height: 19px; text-align: left; background: red; transition: all 0.2s;}
+.work .card .desc ul.tag-list li {float:left;}
+.work .card p {font-size:14px;}
 
 .last, .card.last{margin-right: 0px;}
+
+@media (min-width: 920px) {
+    .hidden-mobile{
+        display:block;
+    }
+    .intro{
+        min-height: 560px;
+        section{
+            margin:30px auto;
+        }
+        h2{
+            margin-top: 70px;
+        }
+    }
+    .work-container{
+        @include flex();
+        justify-content: center;
+        justify-content: space-between;
+    }
+    .work .card {
+        width:215px;
+    }
+    .phone-container{
+        position:relative;
+        top:82px;
+        .background{
+            width:74%;
+            z-index: -1;
+            position:absolute;
+            top:-71px;
+            left:5px;
+        }
+        .phone{
+            width:45.5%;
+            margin:0 auto;
+            @include skewY(-16deg);
+            div img{
+                width:100%;
+            }
+        }
+    }
+}
 
 //typed.js blinking cursor
 .typed-cursor{

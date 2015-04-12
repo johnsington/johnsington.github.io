@@ -4,10 +4,12 @@
     <meta charset="utf-8">
 	<!--viewport-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="scripts/handlebars-v3.0.1.js"></script>
     <script src="scripts/typed.js"></script>
+    <script src="css/slick/slick.min.js"></script>
     <script src="site.js"></script>
 	<title>John Salaveria</title>
 </head>
@@ -31,14 +33,25 @@
             <span>I am </span><span class="element"></span>
         </div>
     </header>
-    <div class="content">
-        <section>
-            <h1>I write and study code.</h1>
+    <div class="container intro">
+        <section class = "six columns hidden-mobile">
+        <div class="phone-container">
+            <img class="background" src="img/phone-bg.png"/>
+            <div class="phone">
+                <div><img src="http://upload.wikimedia.org/wikipedia/en/a/af/Android_4.2_on_the_Nexus_4.png"/></div>
+                <div><img src="http://i.imgur.com/h7SRM.png"/></div>
+                <div><img src="http://www.androidpolice.com/wp-content/uploads/2012/11/nexusae0_wm_2012-11-01-00.58.58.png"/></div>
+            </div>
+        </div>
+        </section>
+        <section class="six columns">
+            <h2>I write and study code.</h2>
             <p><strong>As a software engineering student from the University of Waterloo</strong>, my studies extend from basic algorithms and syntax to uncovering the very foundation of computers themselves. Exploring the applications and science behind computing have impactfully changed my perspective on the simplest electronics we interact with everyday, and wielding the ability to create real-world solutions from lines of code remains to be the very thrilling idea that drives me to program.
             </p>
-            <p>Apart from generating compile errors and writing proofs, I take part in a variety of Waterloo clubs and societies such as the <a href= "https://uwaterloo.ca/engineering-student-ambassadors/people-profiles/john-salaveria">Engineering Ambassadors</a> and <a href="https://www.facebook.com/uwstylesoc/posts/750218771738727">Style Society</a>. I juggle a class act of being a thrifted <a href="http://johnsington.tumblr.com/">style blogger</a>, <a href="http://open.spotify.com/user/12159397068">prolific indie music connossieur</a>, and gym junkie all at the same time. You can also catch me doing improv piano covers with my friends in coffee houses around campus. You may also find me caffeine-wired in 24-hour hackathons working on yet another copy of Instagram. I'm from the Philippines, but I've also lived in the US for most of my life before my rocket crashlanded into Canada.</p>
         </section>
-        <section class="work">
+    </div>
+    <div class="container">
+        <section class="work twelve columns">
             <h2 class="text-center">Where I've worked</h2>
             <div class="work-container">
                     <div class="card" id="klick">
