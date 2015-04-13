@@ -8,7 +8,7 @@
 body{margin: 0; padding: 0; font-family: 'Source Sans Pro', sans-serif;}
 h1,h2 {margin: 0; padding: 0 0 15px; font-size:40px;line-height: 43px;}
 h3{margin:0; padding: 0; font-weight: bold;}
-p {margin: 0; font-size: 20px; line-height: 25px; font-weight: 300; padding: 0 0 15px;}
+p {margin: 0; font-size: 20px; line-height: 40px; font-weight: 300; padding: 0 0 15px;}
 a {text-decoration: none; font-weight: 600; color:black;}
 strong {font-weight: 600;}
 
@@ -202,20 +202,25 @@ ul.tag-list li.last{margin-right: 0px;}
     }
 }
 
-.work .card .slider {cursor: pointer; padding: 50px 0 0; text-align: center; transition: all 0.4s; position: relative; top: 0; color: white;}
+.work .card .slider {cursor: pointer; padding: 30px 0 0; text-align: center; transition: all 0.4s; position: relative; top: 0; color: white;}
 .work .card .slider h3{padding: 0px 20px 10px; font-size: 20px; letter-spacing: 1px; opacity: 1; color: #fff; transition: all 0.4s;}
-.work .card .slider em{opacity: 0; transition: all 0.2s; font-size: 14px;}
-.work .card .slider.hover {padding: 64px 0 0;}
-.work .card .slider.hover em{opacity: 1; transition: all 0.2s;}
-.work .card .slider.shiftup {cursor: default; top: -136px;}
+.work .card .slider em{font-size: 14px;}
+.work .card .slider.hover {padding: 20px 0 0;}
+.work .card .slider.shiftup {cursor: default; top: -100px;}
 .work .card .desc.shiftup {top: 20px; transition: all 0.2s;}
 .work .card img {width:70px; height:70px; border: 1px solid white; margin: 0px 0px 15px;}
-.work .card .desc {position: relative; top: 90px; padding: 20px; font-size: 12px; line-height: 19px; text-align: left; background: red; transition: all 0.2s;}
+.work .card .desc {position: relative; top: 90px; padding: 20px; font-size: 12px; line-height: 19px; text-align: left; background: black; transition: all 0.2s;}
 .work .card .desc ul.tag-list li {float:left;}
 .work .card p {font-size:14px;}
 
 .last, .card.last{margin-right: 0px;}
 
+.intro.u-full-width{
+    background: url(../img/overlay-w.png);
+    background-color: #333;
+    color:#fff;
+    position: relative;
+}
 @media (min-width: 920px) {
     .hidden-mobile{
         display:block;
@@ -223,7 +228,7 @@ ul.tag-list li.last{margin-right: 0px;}
     .intro{
         min-height: 560px;
         section{
-            margin:30px auto;
+            margin:15px auto;
         }
         h2{
             margin-top: 70px;
@@ -242,12 +247,14 @@ ul.tag-list li.last{margin-right: 0px;}
         top:82px;
         .background{
             width:74%;
-            z-index: -1;
+            z-index: 1;
             position:absolute;
             top:-71px;
             left:5px;
         }
         .phone{
+            position: relative;
+            z-index:10;
             width:45.5%;
             margin:0 auto;
             @include skewY(-16deg);
@@ -258,6 +265,61 @@ ul.tag-list li.last{margin-right: 0px;}
     }
 }
 
+/*Skillset skills panel*/
+.skills{
+    padding: 40px 0;
+    text-align: center;
+    h3{
+        font-size: 20px;
+        padding:0 0 10px;
+    }
+    ul{
+        text-align: center;
+        width:100%;
+        margin: 0 auto;
+        li{
+            opacity:0;
+        }
+    }
+    .one-third.column:first-child{
+    }
+    .one-third.column:last-child{
+        ul{
+            list-style-type: none;
+            text-align: center;
+        }
+    }
+    .column:hover .icon{
+        background-color: #0F1C0B;
+    }
+    .icon{
+        transition: all 0.2s;
+        background-color: #1B3013;
+        color:#fff;
+        width:130px;
+        height:130px;
+        margin:20px auto;
+        border-radius: 100%;
+        p{
+            line-height: 130px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media (min-width: 920px){
+    .one-third.column:first-child{
+        border-right:1px solid #e4e4e4;
+    }
+    .one-third.column:last-child{
+        border-left:1px solid #e4e4e4;
+    }
+    .skills ul{
+        width:75%;
+        text-align: left;
+    }
+}
 //typed.js blinking cursor
 .typed-cursor{
     opacity: 1;

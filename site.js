@@ -1,3 +1,12 @@
+function fadeSequentially(){
+	var duration = 600;
+
+	$('.skills ul li').each(function(i) {
+ 			console.log(i);
+ 			$(this).delay( i*(duration/2) ).animate({opacity:1}, duration);
+	});
+}
+
 //Card modules
 function cardInit(id){
 	$(id).on({
@@ -13,10 +22,10 @@ function cardInit(id){
 			//opens clicked card
 			if(!$(this).hasClass("shiftup")){
 				//resets all active cards
-				$(".slider").removeClass("shiftup");
+				$(".slider").removeClass("shiftup").removeClass("hover");
 				$(".desc").removeClass("shiftup");
 				//opens active card
-				$(this).addClass("shiftup");
+				$(this).addClass("shiftup").addClass("hover");
 				$(".desc", this).addClass("shiftup").css("height", $(".card").css("height"));
 			}
 			else{
@@ -55,15 +64,26 @@ $(document).ready(function(){
 	}, 500);
 	});
 	
-	//initialize card funcationality
-	// $(".slider").each(function(){
-	// 	cardInit("#" + $(this).attr("id"));
-	// });
+	// initialize card funcationality
+	$(".slider").each(function(){
+		cardInit("#" + $(this).attr("id"));
+	});
+
+	//phone carousel initialization
 	$('.phone').slick({
 		autoplay: true,
 		autoplaySpeed: 3000,
 		arrows:false
 	 });
+
+	var waypoints = $('.skills').waypoint({
+	  handler: function(direction) {
+	    console.log(this.element.id + ' hit');
+	    fadeSequentially();
+	  },
+	  offset:100
+	});
+
 	//resizes landing to fit web client height
 	$(window).resize(function(){
 		resizeLanding();
