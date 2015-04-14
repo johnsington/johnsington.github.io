@@ -76,6 +76,12 @@ $(document).ready(function(){
 		arrows:false
 	 });
 
+	$('.quotes').slick({
+		autoplay: true,
+		autoplaySpeed: 5000,
+		arrows:false
+	});
+
 	var waypoints = $('.skills').waypoint({
 	  handler: function(direction) {
 	    console.log(this.element.id + ' hit');

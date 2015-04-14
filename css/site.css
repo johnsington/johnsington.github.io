@@ -531,6 +531,7 @@ header {
   font-family: 'Source Sans Pro', san-serif;
   font-weight: 600;
   background: url(../img/garden-bg-2-2.jpg);
+  /*background-attachment: fixed;*/
   background-size: cover; }
   header .overlay {
     width: 100%;
@@ -589,7 +590,7 @@ ul.menu {
   padding-top: 20px; }
 
 section {
-  padding: 25px 0; }
+  padding: 40px 0; }
 
 /*HEADER for desktop*/
 @media (min-width: 920px) {
@@ -796,6 +797,21 @@ ul.tag-list li.last {
       font-size: 40px;
       font-weight: bold; }
 
+/*quotes panel*/
+.references {
+  background: url(../img/overlay-w.png);
+  background-color: #333;
+  color: white; }
+  .references .container {
+    padding-top: 40px;
+    background: url(../img/quote-brace.png) no-repeat;
+    background-size: 65px auto;
+    background-position: 2px 55px; }
+  .references p.byline {
+    font-size: 17px;
+    line-height: 23px;
+    padding-left: none; }
+
 @media (min-width: 920px) {
   .one-third.column:first-child {
     border-right: 1px solid #e4e4e4; }
@@ -805,7 +821,13 @@ ul.tag-list li.last {
 
   .skills ul {
     width: 75%;
-    text-align: left; } }
+    text-align: left; }
+
+  .references .container {
+    background-size: 65px auto;
+    background-position: 30px 52px; }
+  .references p.byline {
+    padding-left: 70%; } }
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
