@@ -7,6 +7,13 @@ function fadeSequentially(){
 	});
 }
 
+//fix this function
+function scrollTo(dest){
+	console.log('height: ' + $(dest).height());
+	// console.log('this: ' + $(dest).hasClass('skills'));
+	$('html, body').animate({scrollTop:$(dest).offset().top}, 'slow');
+}
+
 //Card modules
 function cardInit(id){
 	$(id).on({
@@ -82,6 +89,7 @@ $(document).ready(function(){
 		arrows:false
 	});
 
+	//animate skill li's
 	var waypoints = $('.skills').waypoint({
 	  handler: function(direction) {
 	    console.log(this.element.id + ' hit');
@@ -90,6 +98,19 @@ $(document).ready(function(){
 	  offset:100
 	});
 
+	var waypoints2 = $('.work').waypoint({
+	  handler: function(direction) {
+	    $('.typed-2').animate({opacity:1, top:0}, 1000);
+	  },
+	  offset:300
+	});
+
+
+	//click event handles
+	$('#about').click(function(e){
+		e.preventDefault();
+		scrollTo($('.skills'));
+	})
 	//resizes landing to fit web client height
 	$(window).resize(function(){
 		resizeLanding();

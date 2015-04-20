@@ -9,7 +9,8 @@ body{margin: 0; padding: 0; font-family: 'Source Sans Pro', sans-serif;}
 h1,h2 {margin: 0; padding: 0 0 15px; font-size:40px;line-height: 43px;}
 h3{margin:0; padding: 0; font-weight: bold;}
 p {margin: 0; font-size: 20px; line-height: 40px; font-weight: 300; padding: 0 0 15px;}
-a {text-decoration: none; font-weight: 600; color:black;}
+a {text-decoration: none; font-weight: 600;}
+a:hover {color: #fff; text-decoration: underline;}
 strong {font-weight: 600;}
 
 
@@ -52,9 +53,23 @@ $desktop-width: 900px;
 .clearfix:after {clear:both;}
 .clearfix {zoom:1;}
 .hidden-mobile{display:none;}
+.subtext {color: #808080;}
 
 /*-----HEADER-----*/
+.overlay{
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0px;
+        left:0px;
+        z-index:1;
+        background: url(../img/overlay-w.png) repeat;
+    }
+
 header {
+    a{
+        color:#fff;
+    }
     width:100%;
     color:white;
     letter-spacing: 3px;
@@ -64,15 +79,6 @@ header {
     background: url(../img/garden-bg-2-2.jpg);
     /*background-attachment: fixed;*/
     background-size: cover;
-    .overlay{
-        width:100%;
-        height:100%;
-        position:absolute;
-        top:0px;
-        left:0px;
-        z-index:1;
-        background: url(../img/overlay-w.png) repeat;
-    }
     .top-nav div h1{
         font-size: 20px;
         font-weight:700;
@@ -188,10 +194,16 @@ ul.tag-list li.last{margin-right: 0px;}
 }
 .work{
    h2{
+        position: relative;
+        top:15px;
+        opacity: 0;
         padding-bottom: 30px;
     }
 }
 .work .card{
+    em{
+        color: #808080;
+    }
     position: relative;
     width: 100%;
     height: 245px;
@@ -220,16 +232,19 @@ ul.tag-list li.last{margin-right: 0px;}
 }
 
 .work .card .slider {cursor: pointer; padding: 45px 0 0; text-align: center; transition: all 0.4s; position: relative; top: 0;}
-.work .card .slider h3{padding: 0px 20px 10px; font-size: 20px; letter-spacing: 1px; opacity: 1; transition: all 0.4s;}
+.work .card .slider h3{position: relative; z-index: 10; padding: 0px 20px 10px; font-size: 18px; letter-spacing: 1px; opacity: 1; transition: all 0.4s;}
 .work .card .slider em{font-size: 14px;}
 .work .card .slider.hover {padding: 20px 0 0;}
 .work .card .slider.shiftup {cursor: default; top: -100px;}
 .work .card .desc.shiftup {top: 20px; transition: all 0.2s;}
 .work .card img {width:70px; height:70px; border-radius:100%; margin: 0px 0px 15px;}
-.work .card .desc {position: relative; top: 90px; padding: 20px; font-size: 12px; line-height: 19px; background-color: #1B3013; text-align: left; transition: all 0.2s;}
+.work .card .desc {position: relative; top: 90px; padding: 20px; font-size: 12px; line-height: 19px; background: url(../img/garden-bg-2-2.jpg); text-align: left; transition: all 0.2s;}
 .work .card .desc ul.tag-list li {float:left;}
-.work .card p {font-size:14px; color:#fff; line-height: 25px;}
+.work .card p {position:relative; z-index:10; font-size:14px; color:#fff; line-height: 25px;}
 
+.work .card.last{ 
+   display: none;
+    }
 .last, .card.last{margin-right: 0px;}
 
 .intro.u-full-width{
@@ -255,14 +270,34 @@ ul.tag-list li.last{margin-right: 0px;}
     .work-container{
         @include flex();
         justify-content: center;
-        justify-content: space-between;
+    }
+    .card-row{
+        @include flex();
+        justify-content: center;
+        border-bottom: 1px solid #e4e4e4;
     }
     .work .card {
         width:24.8%;
         border-right:1px solid #e4e4e4;;
     }
-    .work .card:last-child{
-        border: none;
+    .work .card.last{ 
+        display:block;
+        pointer-events:none;
+        background: url(../img/garden-bg-2-2.jpg);
+        color: #fff;
+        img{
+            opacity: 0;
+            }
+        h3{
+            width:52%;
+            padding: 0 0 10px;
+            margin: 0 auto;
+            top:-35px;
+            border-bottom: 1px solid white;
+        }
+    }
+    .card.no-border{
+        border-right: none;
     }
     .phone-container{
         position:relative;
