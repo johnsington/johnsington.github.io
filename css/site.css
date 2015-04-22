@@ -1048,11 +1048,6 @@ ul.tag-list li.last {
     display: inline-block;
     vertical-align: top;
     margin-left: 25px; }
-  .footer span {
-    padding-left: 15px;
-    line-height: 14px;
-    font-size: 16px;
-    letter-spacing: 1px; }
   .footer .contact {
     display: inline-block;
     padding: 42px 0 0 15px; }
