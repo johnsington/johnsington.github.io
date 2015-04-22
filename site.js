@@ -11,7 +11,7 @@ function fadeSequentially(){
 function scrollTo(dest){
 	console.log('height: ' + $(dest).height());
 	// console.log('this: ' + $(dest).hasClass('skills'));
-	$('html, body').animate({scrollTop:$(dest).offset().top}, 'slow');
+	$('html, body').animate({scrollTop:$(dest).offset().top}, 1000);
 }
 
 //Card modules
@@ -44,12 +44,14 @@ function cardInit(id){
 }
 
 function resizeLanding(){
-	if($(window).height()>600){
+	if($(window).height()>500){
 	$("header, .overlay").css("height", $(window).height());
 	}
 	else{
-		$("header, .overlay").css("height", "600px");
+		$("header, .overlay").css("height", "500px");
 	}
+	var titleHeight = $(window).height() / 2 - $(".title").height() / 2 - 20;
+	$(".title").css("top", titleHeight);
 }
 
 $(document).ready(function(){
@@ -102,14 +104,18 @@ $(document).ready(function(){
 	  handler: function(direction) {
 	    $('.typed-2').animate({opacity:1, top:0}, 1000);
 	  },
-	  offset:300
+	  offset:700
 	});
 
 
 	//click event handles
 	$('#about').click(function(e){
 		e.preventDefault();
-		scrollTo($('.skills'));
+		scrollTo($('.about'));
+	})
+	$('#work').click(function(e){
+		e.preventDefault();
+		scrollTo($('.work'));
 	})
 	//resizes landing to fit web client height
 	$(window).resize(function(){

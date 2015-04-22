@@ -9,8 +9,8 @@ body{margin: 0; padding: 0; font-family: 'Source Sans Pro', sans-serif;}
 h1,h2 {margin: 0; padding: 0 0 15px; font-size:40px;line-height: 43px;}
 h3{margin:0; padding: 0; font-weight: bold;}
 p {margin: 0; font-size: 20px; line-height: 40px; font-weight: 300; padding: 0 0 15px;}
-a {text-decoration: none; font-weight: 600;}
-a:hover {color: #fff; text-decoration: underline;}
+a {text-decoration: none; font-weight: 600; color: #FF9933;}
+a:hover {color: #CC7A00; text-decoration: underline;}
 strong {font-weight: 600;}
 
 
@@ -95,14 +95,14 @@ header {
         }
     }
     .title{
-        padding-top: 50px;
+        display:none;
+        position:absolute;
         span{
             font-size: 30px;
             font-weight: 200;
         }
         font-weight:200;
-        position:relative;
-        width:90%;
+        width:100%;
         margin:0 auto;
         text-align: center;
         z-index:10;
@@ -116,15 +116,15 @@ img.square-logo{
     border: 3px solid #fff;
 }
 ul.menu{
+    padding-top: 20px;
     list-style-type: none;
     margin:0;
-    display:inline-block;
+    display:block;
 }
 
 .top-nav .menu li{
-    float: left;
-    padding: 0 10px 0 0;
-    line-height: 53px;
+    float: none;
+    line-height: 43px;
 }
 
 .menu li.last{
@@ -136,12 +136,26 @@ ul.menu{
     margin: 0 auto;
     padding-top: 20px;
 }
-section{
-    padding: 40px 0;
-}
 
+.panel{
+        padding: 40px 0;
+}
 /*HEADER for desktop*/
+
 @media (min-width: 920px) {
+    ul.menu{
+        display:inline-block;
+        padding: 0 10px 0 0;
+        line-height: 53px;
+    }
+    .top-nav .menu li{
+        float: left;
+        line-height: 53px;
+    }
+    
+    .top-nav .menu li.last{
+    padding-right: 0;
+    }
     img.square-logo{
         width:$logo - 40px;
         height:$logo - 40px;
@@ -160,16 +174,39 @@ section{
             }
         }
         .title{
-            padding-top: 90px;
+            display:block;
+            margin: 0 auto;
             span{
                 font-size: 50px;
                 font-weight: 200;
             }
-            width:$desktop-width;
+            width:100%;
         }
     }
 }
 
+/*about panel*/
+section.about{
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 0;
+    h2{
+        padding-top: 10px;
+    }
+    .torso{
+        width: 180px;
+        display:block;
+        margin: 0 auto;
+    }
+
+}
+
+@media (min-width: 920px) {
+    section.about .torso{
+            width: 130%;
+            position:relative;
+            left:-35px;
+        }
+}
 /*work module containers*/
 
 /*!!!!NOTE: CLEAN UP YOUR DAMN STYLING!!!*/
@@ -253,6 +290,7 @@ ul.tag-list li.last{margin-right: 0px;}
     color:#fff;
     position: relative;
     overflow: hidden;
+    padding-bottom: 40px;
 }
 @media (min-width: 920px) {
     .hidden-mobile{
@@ -261,7 +299,7 @@ ul.tag-list li.last{margin-right: 0px;}
     .intro{
         max-height: 500px;
         section{
-            margin:15px auto;
+            margin: 15px auto;
         }
         h2{
             margin-top: 45px;
@@ -326,7 +364,7 @@ ul.tag-list li.last{margin-right: 0px;}
 
 /*Skillset skills panel*/
 .skills{
-    padding: 40px 0;
+    padding-bottom: 40px;
     text-align: center;
     h3{
         font-size: 20px;
@@ -338,6 +376,7 @@ ul.tag-list li.last{margin-right: 0px;}
         margin: 0 auto;
         li{
             opacity:0;
+            color: #808080;
         }
     }
     .one-third.column:first-child{
@@ -400,10 +439,10 @@ ul.tag-list li.last{margin-right: 0px;}
 }
 
 @media (min-width: 920px){
-    .one-third.column:first-child{
+    .skills .one-third.column:first-child{
         border-right:1px solid #e4e4e4;
     }
-    .one-third.column:last-child{
+    .skills .one-third.column:last-child{
         border-left:1px solid #e4e4e4;
     }
     .skills ul{

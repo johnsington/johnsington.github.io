@@ -490,10 +490,11 @@ p {
 
 a {
   text-decoration: none;
-  font-weight: 600; }
+  font-weight: 600;
+  color: #FF9933; }
 
 a:hover {
-  color: #fff;
+  color: #CC7A00;
   text-decoration: underline; }
 
 strong {
@@ -563,10 +564,10 @@ header {
       width: 100%;
       text-align: center; }
   header .title {
-    padding-top: 50px;
+    display: none;
+    position: absolute;
     font-weight: 200;
-    position: relative;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
     z-index: 10; }
@@ -581,14 +582,14 @@ img.square-logo {
   border: 3px solid #fff; }
 
 ul.menu {
+  padding-top: 20px;
   list-style-type: none;
   margin: 0;
-  display: inline-block; }
+  display: block; }
 
 .top-nav .menu li {
-  float: left;
-  padding: 0 10px 0 0;
-  line-height: 53px; }
+  float: none;
+  line-height: 43px; }
 
 .menu li.last {
   padding-right: 0; }
@@ -598,11 +599,23 @@ ul.menu {
   margin: 0 auto;
   padding-top: 20px; }
 
-section {
+.panel {
   padding: 40px 0; }
 
 /*HEADER for desktop*/
 @media (min-width: 920px) {
+  ul.menu {
+    display: inline-block;
+    padding: 0 10px 0 0;
+    line-height: 53px; }
+
+  .top-nav .menu li {
+    float: left;
+    line-height: 53px; }
+
+  .top-nav .menu li.last {
+    padding-right: 0; }
+
   img.square-logo {
     width: 60px;
     height: 60px;
@@ -618,11 +631,28 @@ section {
         padding: 0 50px 0 0;
         line-height: 125px; }
     header .title {
-      padding-top: 90px;
-      width: 900px; }
+      display: block;
+      margin: 0 auto;
+      width: 100%; }
       header .title span {
         font-size: 50px;
         font-weight: 200; } }
+/*about panel*/
+section.about {
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 0; }
+  section.about h2 {
+    padding-top: 10px; }
+  section.about .torso {
+    width: 180px;
+    display: block;
+    margin: 0 auto; }
+
+@media (min-width: 920px) {
+  section.about .torso {
+    width: 130%;
+    position: relative;
+    left: -35px; } }
 /*work module containers*/
 /*!!!!NOTE: CLEAN UP YOUR DAMN STYLING!!!*/
 ul.tag-list {
@@ -755,7 +785,8 @@ ul.tag-list li.last {
   background-color: #333;
   color: #fff;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 40px; }
 
 @media (min-width: 920px) {
   .hidden-mobile {
@@ -835,7 +866,7 @@ ul.tag-list li.last {
         width: 100%; } }
 /*Skillset skills panel*/
 .skills {
-  padding: 40px 0;
+  padding-bottom: 40px;
   text-align: center; }
   .skills h3 {
     font-size: 20px;
@@ -845,7 +876,8 @@ ul.tag-list li.last {
     width: 100%;
     margin: 0 auto; }
     .skills ul li {
-      opacity: 0; }
+      opacity: 0;
+      color: #808080; }
   .skills .one-third.column:last-child ul {
     list-style-type: none;
     text-align: center; }
@@ -888,10 +920,10 @@ ul.tag-list li.last {
     padding-left: none; }
 
 @media (min-width: 920px) {
-  .one-third.column:first-child {
+  .skills .one-third.column:first-child {
     border-right: 1px solid #e4e4e4; }
 
-  .one-third.column:last-child {
+  .skills .one-third.column:last-child {
     border-left: 1px solid #e4e4e4; }
 
   .skills ul {
