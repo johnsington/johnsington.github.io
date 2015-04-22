@@ -1013,8 +1013,11 @@ ul.tag-list li.last {
   .references p.byline {
     padding-left: 70%; } }
 .footer {
+  /*removes apple link <a> color*/
   background-color: #0A0A0A;
   color: #fff; }
+  .footer .appleLinks a {
+    color: #D1D1D1; }
   .footer i {
     padding-right: 5px;
     transition: all 0.2s; }
