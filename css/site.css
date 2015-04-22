@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*responsive grid system*/
 /*
 * Skeleton V2.0.4
@@ -463,6 +464,81 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?50407146");
+  src: url("../font/fontello.eot?50407146#iefix") format("embedded-opentype"), url("../font/fontello.woff?50407146") format("woff"), url("../font/fontello.ttf?50407146") format("truetype"), url("../font/fontello.svg?50407146#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?50407146#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-instagram:before {
+  content: '\e800'; }
+
+/* 'εáÇ' */
+.icon-pdf:before {
+  content: '\e804'; }
+
+/* 'εáä' */
+.icon-phone:before {
+  content: '\e805'; }
+
+/* 'εáà' */
+.icon-facebook-squared:before {
+  content: '\e806'; }
+
+/* 'εáå' */
+.icon-github-squared:before {
+  content: '\e808'; }
+
+/* 'εáê' */
+.icon-linkedin-squared:before {
+  content: '\e809'; }
+
+/* 'εáë' */
+.icon-tumblr:before {
+  content: '\e80a'; }
+
+/* 'εáè' */
+.icon-mail:before {
+  content: '\e80b'; }
+
+/* 'εáï' */
 /*----FONT FAMS----*/
 /*----CSS RESET----*/
 body {
@@ -491,7 +567,8 @@ p {
 a {
   text-decoration: none;
   font-weight: 600;
-  color: #FF9933; }
+  color: #FF9933;
+  transition: all 0.2s; }
 
 a:hover {
   color: #CC7A00;
@@ -935,6 +1012,60 @@ ul.tag-list li.last {
     background-position: 30px 52px; }
   .references p.byline {
     padding-left: 70%; } }
+.footer {
+  background-color: #0A0A0A;
+  color: #fff; }
+  .footer i {
+    padding-right: 5px;
+    transition: all 0.2s; }
+  .footer p:hover i {
+    color: #CC7A00; }
+  .footer .border {
+    width: 84%;
+    margin: 15px 0 0;
+    border-top: 3px solid #808080; }
+  .footer ul.icons {
+    list-style-type: none;
+    padding: 15px 0 0;
+    margin: 0; }
+    .footer ul.icons li {
+      display: inline; }
+      .footer ul.icons li i {
+        font-size: 17px; }
+      .footer ul.icons li a {
+        color: #808080; }
+      .footer ul.icons li a:hover {
+        color: #CC7A00; }
+    .footer ul.icons i:last-child {
+      margin-right: 0; }
+  .footer .square-logo {
+    width: 40px;
+    height: 40px;
+    padding: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px; }
+  .footer span {
+    padding-left: 15px;
+    line-height: 14px;
+    font-size: 16px;
+    letter-spacing: 1px; }
+  .footer .contact {
+    display: inline-block;
+    padding: 42px 0 0 15px; }
+  .footer p {
+    line-height: 18px;
+    font-size: 16px;
+    color: #D1D1D1;
+    padding: 0; }
+  .footer p:first-child {
+    padding-bottom: 10px; }
+  .footer .disclaimer {
+    color: #808080;
+    font-size: 12px;
+    padding-top: 15px;
+    text-align: center; }
+
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
@@ -944,27 +1075,23 @@ ul.tag-list li.last {
 @keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 @-webkit-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
 @-moz-keyframes blink {
   0% {
     opacity: 1; }
-
   50% {
     opacity: 0; }
-
   100% {
     opacity: 1; } }
+
+/*# sourceMappingURL=site.css.map */
