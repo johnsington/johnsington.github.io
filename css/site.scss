@@ -303,7 +303,7 @@ ul.tag-list li.last{margin-right: 0px;}
             margin: 15px auto;
         }
         h2{
-            margin-top: 45px;
+            margin-top: 35px;
         }
     }
     .work-container{
@@ -426,20 +426,63 @@ ul.tag-list li.last{margin-right: 0px;}
         padding-top: 40px;
         background: url(../img/quote-brace.png) no-repeat;
         background-size: 65px auto;
-        background-position: 2px 55px;
+        background-position: 2px 350px;
+    }
+    .quotes{
+        padding: 15px 0 40px;
     }
     p{
+        font-size: 16px;
+        line-height: 30px;
         &.quote{
         }
         &.byline{
-            font-size: 17px;
+            strong{
+                color:#fff;
+            }
+            color: #D1D1D1;;
+            font-size: 14px;
             line-height: 23px;
             padding-left:none;
+        }
+    }
+    #contactForm{
+        input, textarea{
+            border-radius: 0;
+            font-size: 14px;
+            width:100%;
+        }
+        .button-primary{
+            background-color: #739410;
+            background-size: 200%;
+            border:none;
+            transition: all 0.2s;
+        }
+        .button-primary:hover{
+            background-color: #67850F;
+        }
+        .sentDisabled{
+            background-color: #40520A;
+            pointer-events:none;
+            transition: all 0.1s;
         }
     }
 }
 
 @media (min-width: 920px){
+    .references {
+        #contactForm{
+            input, textarea{
+                border-radius: 0;
+                font-size: 14px;
+                width:90%;
+            }
+        }
+        .quotes{
+            padding-top: 86px;
+        }
+    }
+
     .skills .one-third.column:first-child{
         border-right:1px solid #e4e4e4;
     }
@@ -453,15 +496,19 @@ ul.tag-list li.last{margin-right: 0px;}
     .references {
         .container{
             background-size: 65px auto;
-            background-position: 30px 52px;
+            background-position: 437px 95px;
         }
         p.byline{
-            padding-left: 70%;
+            padding-left: 60%;
         }
     }
 }
 
 .footer{
+    footer.panel{
+        width:265px;
+        margin: 0 auto;
+    }
     /*removes apple link <a> color*/
     .appleLinks a{color: #D1D1D1; font-weight: normal;}
 
@@ -508,6 +555,10 @@ ul.tag-list li.last{margin-right: 0px;}
         margin-left:25px;
 
     }
+    .square-logo:hover{
+        background: url(../img/garden-bg-2-2.jpg);
+        background-size: 250%;
+    }
     .contact{
         display:inline-block;
         padding: 42px 0 0 15px;
@@ -528,6 +579,7 @@ ul.tag-list li.last{margin-right: 0px;}
         font-size: 12px;
         padding-top: 15px;
         text-align: center;
+        width:271px;
     }
 }
 //typed.js blinking cursor

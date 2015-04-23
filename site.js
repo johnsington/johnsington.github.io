@@ -55,6 +55,9 @@ function resizeLanding(){
 }
 
 $(document).ready(function(){
+	//initializes parse
+	Parse.initialize("g7pzoG8LovJzHImJG5OFODYrEKQ4wDVw4YK1z36j", "ihCOYBoeAHpqfvzRgGdMsbikuFKeKu2XXg6FsfXT");
+	var EmailMessage = Parse.Object.extend("EmailMessage");
 	resizeLanding();
 
 	//initial animations
@@ -120,5 +123,35 @@ $(document).ready(function(){
 	//resizes landing to fit web client height
 	$(window).resize(function(){
 		resizeLanding();
-	})
-})
+	});
+
+	//submits the message form
+	$('#submitForm').click(function(e){
+		e.preventDefault();
+		var email_id = $('input#email').val();
+		var message = $('textarea#message').val();
+		var name = $('input#name').val();
+
+		if(message == "" || name == ""){
+			alert("Please fill out the missing fields!");
+			return;
+		}
+		var emailMessage = new EmailMessage();
+
+		emailMessage.set("email", email_id);
+		emailMessage.set("message", message);
+		emailMessage.set("name", name);
+
+		emailMessage.save(null, {
+			success : function(emailMessage){
+				console.log('email message sent with id: ' + emailMessage.id);
+				console.log('message by ' + name + ' (' + email_id + '): ' + message);
+				$('input#email, textarea, input#name').val("");
+				$('#submitForm').attr("value", "Submitted!").addClass("sentDisabled");
+			},
+			error : function(emailMessage, error){
+				console.log('error');
+			}
+		});
+	});
+});

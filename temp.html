@@ -4,6 +4,7 @@
     <meta charset="utf-8">
 	<!--viewport-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website of John Salaveria: web developer and software engineering student at the University of Waterloo.">
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/slick/slick.css">
     <link rel="shortcut icon" href="img/square-logo-black.ico">
@@ -13,6 +14,7 @@
     <script src="css/slick/slick.min.js"></script>
     <script src="scripts/jquery.waypoints.min.js"></script>
     <script src="site.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 	<title>John Salaveria | Personal Website</title>
 </head>
     
@@ -106,6 +108,7 @@
                 <h2>Code and design.</h2>
                 <p><strong> By fostering a passion in both programming and graphic design</strong>, I am able to spearhead the projects I embark on with a purpose to create visually engaging user experiences. Elements are elegantlly arranged while programmed functionality immerse the user in seamless interactivity.
                 </p>
+                <a href="2014/res/John Salaveria - 2A Resume Condensed.pdf"><button class="icon-pdf button-primary">&nbsp;&nbsp;&nbsp;View Resume</button></a>
             </section>
         </div>
     </div>
@@ -213,38 +216,47 @@
     </div>
     <div class="u-full-width references">
         <div class="container">
-            <section class="offset-by-one ten columns">
+            <section class="one-half column">
+                <h2>Let's talk!</h2>
+                <form id="contactForm">
+                    <input id="name" type="text" placeholder="Anna Wintour"><br>
+                    <input id="email" type="email" placeholder="anna@vogue.com"><br>
+                    <textarea id="message" placeholder="Your message!"></textarea>
+                    <input id="submitForm" class="button-primary" type="submit" value="Submit message">
+                </form>
+            </section>
+            <section class="one-half column">
                 <div class="quotes">
                     <div class="quote-container">
                         <p class="quote">
                             <em>
-                            Working with John has been an absolute pleasure, he does a wonderful job in any task he is given and is able to lead his peers in tasks he has just been introduced to himself.
+                            Working with John has been an absolute pleasure, he does a wonderful job in any task he is given and is able to lead his peers in tasks he has just been introduced to himself."
                             </em>
                         </p>
                         <p class="byline">
-                            <strong>- Ashley Sellouk</strong><br>
+                            <strong>Ashley Sellouk</strong><br>
                             <em>Project Coordinator, CIBC</em>
                         </p>
                     </div>
                     <div class="quote-container">
                         <p class="quote">
                             <em>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
                             </em>
                         </p>
                         <p class="byline">
-                            <strong>- Latin Gelatin</strong><br>
+                            <strong>Latin Gelatin</strong><br>
                             <em>Teacher, Ipsum</em>
                         </p>
                     </div>
                     <div class="quote-container">
                         <p class="quote">
                             <em>
-                               But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound.
+                               But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound."
                             </em>
                         </p>
                         <p class="byline">
-                            <strong>- Christa Gampp</strong><br>
+                            <strong>Christa Gampp</strong><br>
                             <em>Teacher, Msgr. Johnson CSS</em>
                         </p>
                     </div>
@@ -253,11 +265,8 @@
         </div>
     </div>
     <div class="u-full-width footer">
-        <footer class="panel container">
-            <div class="one-third column">
-                &nbsp;
-            </div>
-            <div class="one-third column">
+        <footer class="panel">
+            <div class="">
                 <img class="square-logo" src="img/square-logo.png"/>
                 <div class="contact">
                 <p><i class="icon-phone"></i><span class="appleLinks">647-779-5994</span></p>
@@ -270,9 +279,6 @@
                 </ul>
                 </div>
                 <p class="disclaimer">&copy; 2015 John Salaveria. All rights reserved.</p>
-            </div>
-            <div class="one-third column">
-                &nbsp;
             </div>
         </footer>
     </div>
