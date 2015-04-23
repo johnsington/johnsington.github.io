@@ -448,6 +448,8 @@ ul.tag-list li.last{margin-right: 0px;}
     }
     #contactForm{
         input, textarea{
+            -webkit-appearance: none;
+            border-radius: 0;
             border-radius: 0;
             font-size: 14px;
             width:100%;

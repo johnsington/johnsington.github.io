@@ -995,6 +995,8 @@ ul.tag-list li.last {
       .references p.byline strong {
         color: #fff; }
   .references #contactForm input, .references #contactForm textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
     border-radius: 0;
     font-size: 14px;
     width: 100%; }
