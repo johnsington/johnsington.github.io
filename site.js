@@ -50,7 +50,7 @@ function resizeLanding(){
 	else{
 		$("header, .overlay").css("height", "500px");
 	}
-	var titleHeight = $(window).height() / 2 - $(".title").height() / 2 - 20;
+	var titleHeight = $(window).height() / 2 - $(".title").height() / 2;
 	$(".title").css("top", titleHeight);
 }
 
@@ -65,10 +65,10 @@ $(document).ready(function(){
 		setTimeout(function(){
 	    $(".element").typed({
 	        strings: [
-	        	"<b>multi-disciplinary<b>.^200",
-	        	"<b>front-end<b>.^200",
-	        	"<b>visually creative<b>.^200",
-	        	"<b>John<b>.^200"
+	        	"am not a hipster.^400",
+	        	"blog about about style.^300 (sorta)^500",
+	        	"study software engineering at uWaterloo.^500",
+	        	"design and code in the web.^500"
 	        	],
 	        typeSpeed: 30,
 	        startDelay: 500
