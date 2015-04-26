@@ -688,7 +688,7 @@ ul.menu {
   .top-nav .menu li.last {
     padding-right: 0; }
 
-  img.square-logo {
+  img.square-logo, body.projects img.square-logo {
     width: 60px;
     height: 60px;
     padding: 25px; }
@@ -1063,7 +1063,7 @@ ul.tag-list li.last {
   .footer p:hover i {
     color: #CC7A00; }
   .footer .border {
-    width: 84%;
+    width: 64%;
     margin: 15px 0 0;
     border-top: 3px solid #808080; }
   .footer ul.icons {
@@ -1107,6 +1107,32 @@ ul.tag-list li.last {
     text-align: center;
     /*width:271px;*/ }
 
+body.projects header {
+  color: #000;
+  background: #fff; }
+body.projects a {
+  color: #000; }
+body.projects img.square-logo {
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border: 3px solid #000; }
+
+/*HEADER for desktop*/
+@media (min-width: 920px) {
+  body.projects .work .card {
+    width: 33.2%;
+    border-right: 1px solid #e4e4e4; }
+  body.projects .title {
+    padding-top: 20px; }
+  body.projects img.square-logo {
+    width: 60px;
+    height: 60px;
+    padding: 25px; }
+  body.projects header .top-nav {
+    line-height: 0;
+    padding: 40px 0 0;
+    top: 0; } }
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;

@@ -44,14 +44,14 @@ function cardInit(id){
 }
 
 function resizeLanding(){
-	if($(window).height()>500){
-	$("header, .overlay").css("height", $(window).height());
+	if($(window).width()>500){
+	$("header.main, .overlay").css("height", $(window).height());
 	}
 	else{
-		$("header, .overlay").css("height", "500px");
+		$("header.main, .overlay").css("height", "450px");
 	}
 	var titleHeight = $(window).height() / 2 - $(".title").height() / 2;
-	$(".title").css("top", titleHeight);
+	$("header.main .title").css("top", titleHeight);
 }
 
 $(document).ready(function(){
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	var EmailMessage = Parse.Object.extend("EmailMessage");
 	resizeLanding();
 
-	//initial animations
+	//initial animations for main
 	$(window).load(function(){
 		setTimeout(function(){
 	    $(".element").typed({
@@ -69,6 +69,19 @@ $(document).ready(function(){
 	        	"blog about about style.^300 (sorta)^500",
 	        	"study software engineering at uWaterloo.^500",
 	        	"design and code in the web.^500"
+	        	],
+	        typeSpeed: 30,
+	        startDelay: 500
+	    });
+	}, 500);
+	});
+
+	//initial animations for projects
+	$(window).load(function(){
+		setTimeout(function(){
+	    $(".element-2").typed({
+	        strings: [
+	        	"Here are a few things I've worked on",
 	        	],
 	        typeSpeed: 30,
 	        startDelay: 500
@@ -112,10 +125,6 @@ $(document).ready(function(){
 
 
 	//click event handles
-	$('#about').click(function(e){
-		e.preventDefault();
-		scrollTo($('.about'));
-	})
 	$('#work').click(function(e){
 		e.preventDefault();
 		scrollTo($('.work'));

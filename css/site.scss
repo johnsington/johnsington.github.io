@@ -164,7 +164,7 @@ ul.menu{
     .top-nav .menu li.last{
     padding-right: 0;
     }
-    img.square-logo{
+    img.square-logo, body.projects img.square-logo{
         width:$logo - 40px;
         height:$logo - 40px;
         padding:25px;
@@ -541,7 +541,7 @@ ul.tag-list li.last{margin-right: 0px;}
         }
     }
     .border{
-        width:84%;
+        width:64%;
         margin: 15px 0 0;
         border-top: 3px solid #808080;
     }
@@ -599,6 +599,50 @@ ul.tag-list li.last{margin-right: 0px;}
         padding-top: 15px;
         text-align: center;
         /*width:271px;*/
+    }
+}
+
+body.projects{
+    header{
+        color:#000;
+        background: #fff;
+    }
+
+    a{
+        color:#000;
+    }
+
+    img.square-logo{
+        width:$logo-mobile;
+        height:$logo-mobile;
+        padding:15px;
+        border: 3px solid #000;
+    }
+}
+
+/*HEADER for desktop*/
+
+@media (min-width: 920px) {
+    body.projects{
+        .work .card {
+            width:33.2%;
+            border-right:1px solid #e4e4e4;;
+        }
+        .title{
+            padding-top: 20px;
+        }
+        img.square-logo{
+            width:$logo - 40px;
+            height:$logo - 40px;
+            padding:25px;
+        }
+        header{
+            .top-nav{
+                line-height: 0;
+                padding: 40px 0 0;
+                top:0;
+            }
+        }
     }
 }
 //typed.js blinking cursor
