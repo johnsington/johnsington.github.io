@@ -222,6 +222,8 @@ section.about{
         margin: 0 auto;
     }
 
+    p {padding-bottom: 10px;}
+
 }
 
 @media (min-width: 920px) {
@@ -620,6 +622,9 @@ body.projects{
 
     a{
         color:#000;
+        &.proj{
+            color:#739410;
+        }
     }
 
     img.square-logo{

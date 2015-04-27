@@ -1,4 +1,271 @@
 <!DOCTYPE html>
 <html>
-Site is currently unavailable. Please come back again with donut offerings.
+<head>
+    <meta charset="utf-8">
+	<!--viewport-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website of John Salaveria: web developer and software engineering student at the University of Waterloo.">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="shortcut icon" href="img/square-logo-black.ico">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="scripts/handlebars-v3.0.1.js"></script>
+    <script src="scripts/typed.js"></script>
+    <script src="css/slick/slick.min.js"></script>
+    <script src="scripts/jquery.waypoints.min.js"></script>
+    <script src="site.js"></script>
+    <script src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+	<title>John Salaveria | Personal Website</title>
+</head>
+    
+<body>
+    <header class="main">
+        <div class="overlay"></div>
+        <div class="top-nav clearfix">
+            <div class="pull-left">
+                <a href="index.html"><img class="square-logo" src="img/square-logo.png"/></a>
+            </div>
+            <div class="pull-right">
+                <ul class="menu">
+                    <li id="about"><a href="projects.html">PROJECTS</a></li>
+                    <li id="work"><a href="">WORK</a></li>
+                    <li id="resume"><a href="2014/res/">RESUME</a></li>
+                    <li id="blog" class="last"><a href="http://johnsington.tumblr.com/">BLOG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="title">
+            <h1>JOHN SALAVERIA</h1>
+            <span>I </span><span class="element"></span>
+        </div>
+        <span class="chevron">
+            &#x25BC;
+        </span>
+    </header>
+        <section class="container panel about">
+            <div class="two-thirds column">
+                <h2>About me.</h2>
+                <p>
+                <strong>I am currently majoring in software engineering</strong> at the University of Waterloo. Beyond my studies, I am mainly involved in representing my faculty through the <a href="https://uwaterloo.ca/engineering-student-ambassadors/people-profiles/john-salaveria">Engineering Ambassadors</a> program. I also embark on four-month co-ops between academic terms exploring career paths and learning a few new tricks. I recently finished my last work term with <a href="https://www.klick.com/health/">Klick&nbsp;Health</a>, a leading digital agency in the health industry. When I'm not writing software, I create ecletic indie pop playlists for my runs and&nbsp;shoot new looks for my style blog.
+                </p>
+                <a href="projects.html"><button class="icon-pdf button-primary">&nbsp;&nbsp;&nbsp;View Resume</button></a>
+            </div>
+            <div class="one-third column">
+            <img class="torso" src="img/img-torso.png"/>
+            </div>
+            </section>
+
+        </section>
+        <section class="container skills panel">
+        <h2>A diverse skillset.</h2>
+        <p><strong>I'm passionate for creating things on the web.</strong> Whether it's with designing pleasant user interfaces or hacking a web API to expose social data metrics, developing for the web is programming I enjoy doing. I have grown to learn a multitude of technical skills and methods in 3 core fields:</p>
+        <div class="container">
+            <div class="one-third column">
+                <div class="icon">
+                    <p>&lt;/&gt;</p>
+                </div>
+                <h3>WEB DESIGN</h3>
+                <ul>
+                    <li>HTML5, CSS3, and SASS</li>
+                    <li>Adobe Creative Suite 5</li>
+                    <li>Responsive grid design</li>
+                    <li>Cross-browser support</li>
+                </ul>
+            </div>
+            <div class="one-third column">
+                <div class="icon second">
+                    <p>();</p>
+                </div>
+                <h3>APPLICATION DEVELOPMENT</h3>
+                <ul>
+                    <li>JQuery, AngularJS, MVC</li>
+                    <li>AJAX practices, Promises</li>
+                    <li>C++, C, Python</li>
+                    <li>Blackbox testing</li>
+                </ul>
+            </div>
+            <div class="one-third column">
+                <div class="icon last">
+                    <p>UW</p>
+                </div>
+                <h3>EDUCATION</h3>
+                <ul>
+                    <li>Honours Software Engineering</li>
+                    <li>University of Waterloo</li>
+                    <li>Co-op student</li>
+                    <li>Class of 2018</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="u-full-width intro panel">
+        <div class="container intro">
+            <section class = "six columns hidden-mobile">
+            <div class="phone-container">
+                <img class="background" src="img/phone-bg.png"/>
+                <div class="phone">
+                    <div><img src="img/screen_instakarma.png"/></div>
+                    <div><img src="img/screen_saywat.png"/></div>
+                </div>
+            </div>
+            </section>
+            <section class="six columns">
+                <h2>Design and code.</h2>
+                <p><strong> By fostering a passion in both programming and visual design</strong>, I am able to spearhead the work I embark on with an intuition for great web user experiences. From hacking the Instagram API to creating digital content for a virtual world, my personal projects span a wide breadth of disciplines.
+                </p>
+                <a href="projects.html"><button class="button-primary">See Projects</button></a>
+            </section>
+        </div>
+    </div>
+    <div class="u-max-full-width container work panel">
+        <section class="work twelve columns">
+                <h2 class="text-center typed-2">Where I've worked</h2>
+            <div class="work-container">
+                    <!-- <div class="over"></div> -->
+                    <span class="card-row">
+                    <div class="card" id="klick">
+                        <div class="slider" id="c1">
+                            <img src="img/klick-logo-b.png"/>
+                            <h3>KLICK HEALTH</h3>
+                            <em class="subtext">Front End Web Developer</em>
+                            <div class="desc klick">
+                                <div class="overlay"></div>
+                                <p>I developed across multiple websites and email campaigns for various pharmaceutical brands in the largest independent digital health agency.</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+                    <div class="card" id="cibc">
+                        <div class="slider" id="c2">
+                            <img src="img/cibc-logo-b.png"/>
+                            <h3>CIBC</h3>
+                            <em>Quality Assurance Analyst</em>
+                            <div class="desc">
+                                <div class="overlay"></div>
+                                <p>Using the HP Application Lifecyle Management software, I conducted manual testing for their online and mobile banking applications.</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+                    <div class="card">
+                        <div class="slider" id="c3">
+                            <img src="img/mcd-logo-b.png"/>
+                            <h3>McDONALD'S</h3>
+                            <em>Crew Member</em>
+                            <div class="desc cibc">
+                                <div class="overlay"></div>
+                                <p>I provided exceptional customer service taking and presenting food orders to thousands of customers, including Rob Ford.</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+                    <div class="card no-border">
+                        <div class="slider" id="c4">
+                            <img src="img/tcdsb-logo-b.png"/>
+                            <h3>FOCUS ON YOUTH</h3>
+                            <em>
+                                Summer Camp Counsellor
+                            </em>
+                            <div class="desc tcdsb">
+                                <div class="overlay"></div>
+                                <p>I was involved in the event programming and facilitation of a summer camp daycare of 15 children from 5-7 years old.</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+                    </span><!--end of row-->
+                    <div class="card" id="cibc">
+                        <div class="slider" id="c5">
+                            <img src="img/tcdsb-logo-b.png"/>
+                            <h3>YSW</h3>
+                            <em>Summer Camp Counsellor</em>
+                            <div class="desc">
+                                <div class="overlay"></div>
+                                <p>I assisted in the facilitation of a small summer program for the children in Yorktown Womens Shelter.</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+                    <div class="card">
+                        <div class="slider" id="c6">
+                            <img src="img/cne-logo-b.png"/>
+                            <h3>THE EX</h3>
+                            <em>Buildings Attendant</em>
+                            <div class="desc tcdsb">
+                                <div class="overlay"></div>
+                                <p>I pushed a garbage cart and sweeped hallways in the Direct Energy Center for 15 8-hour shifts.</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+                    <div class="card">
+                        <div class="slider" id="c7">
+                            <img src="img/wonderland-logo-b.png"/>
+                            <h3>CANADA'S WONDERLAND</h3>
+                            <em>Food and Beverage</em>
+                            <div class="desc cibc">
+                                <div class="overlay"></div>
+                                <p>I fried funnel cakes and provided customer service in the amusement park's busiest dessert shop.</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+                    <div class="card no-border last">
+                        <div class="overlay"></div>
+                        <div class="slider" id="c8">
+                            <img src="img/tcdsb-logo-b.png"/>
+                            <h3><i>Work with me!</i></h3>
+                            <em>
+                                &nbsp;
+                            </em>
+                            <div class="desc tcdsb">
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                    </div> <!--end of card-->
+            </div>
+        </section>
+    </div>
+    <div class="u-full-width references">
+        <div class="container">
+            <section class="one-half column">
+                <h2>Let's talk!</h2>
+                <form id="contactForm">
+                    <input id="name" type="text" placeholder="Your name"><br>
+                    <input id="email" type="email" placeholder="Your email"><br>
+                    <textarea id="message" placeholder="Your message!"></textarea>
+                    <input id="submitForm" class="button-primary" type="submit" value="Submit message">
+                </form>
+            </section>
+            <section class="one-half column">
+                <div class="quotes">
+                    <div class="quote-container">
+                        <p class="quote">
+                            <em>
+                            Working with John has been an absolute pleasure, he does a wonderful job in any task he is given and is able to lead his peers in tasks he has just been introduced to himself."
+                            </em>
+                        </p>
+                        <p class="byline">
+                            <strong>Ashley Sellouk</strong><br>
+                            <em>Project Coordinator, CIBC</em>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="u-full-width footer">
+        <footer class="panel">
+            <div class="">
+                <img class="square-logo" src="img/square-logo.png"/>
+                <div class="contact">
+                <p><i class="icon-phone"></i><span class="appleLinks">647-779-5994</span></p>
+                <p><i class="icon-mail"></i>jj.salaveria@gmail.com</p>
+                <div class="border"></div>
+                <ul class="icons">
+                    <li><a href="https://github.com/johnsington"><i class="icon-github-squared"></i></a></li>
+                    <li><a href="https://ca.linkedin.com/in/johnsalaveria"><i class="icon-linkedin-squared"></i></a></li>
+                    <li><a href="https://instagram.com/johnsington"><i class="icon-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/johnsington"><i class="icon-facebook-squared"></i></a></li>
+                </ul>
+                </div>
+                <p class="disclaimer">&copy; 2015 John Salaveria. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
 </html>

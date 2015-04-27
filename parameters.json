@@ -6,7 +6,8 @@
 		      "desc": "Implementing web development practices I learned from Klick Health, I rebuilt my whole website to use HTML5, CSS3, JQuery, and various JS plug-ins for interactivity. The site features responsive design, custom JQuery components, and a simple form attached to a Parse back-end.",
 		      "id": "site-redesign",
 		      "category": "design",
-		      "background":"img/projects/bg-site.jpg"
+		      "background":"img/projects/bg-site.jpg",
+		      "link": "index.html"
 	      },
 	      {
 		      "title": "#instakarma",
@@ -14,7 +15,8 @@
 		      "desc": "Using AJAX methods via JQuery, I leveraged the Instgram API to count the total likes of a user's recent photos. This was also an exercise in responsive user interface design between mobile and desktop clients.",
 		      "id": "instakarma",
 		      "category": "code",
-		      "background":"img/projects/bg-instakarma.jpg"
+		      "background":"img/projects/bg-instakarma.jpg",
+		      "link": "ig-ajax.html"
 	      },
 	      {
 		      "title": "Style Blog",
@@ -22,7 +24,8 @@
 		      "desc": "Started this year, I shoot seasonal fashion looks and write about them using the Tumblr blog platform. The site uses a custom theme I developed using HTML and CSS.",
 		      "id": "styleblog",
 		      "category": "misc",
-		      "background":"http://s15.postimg.org/joaxz6s6j/vscocam_photo_3.jpg"
+		      "background":"http://s15.postimg.org/joaxz6s6j/vscocam_photo_3.jpg",
+		      "link": "http://johnsington.tumblr.com/"
 	      },
 	      {
 		      "title": "ThreadSwap",
@@ -30,7 +33,8 @@
 		      "desc": "Done over a 24-hour hack, I developed an front-end of ThreadSwap UI using HTML, CSS, and AngularJS. The main purpose was to explore the capabilities of Google's popular MV framework.",
 		      "id": "threadswap",
 		      "category": "code",
-		      "background":"img/projects/bg-threadswap.jpg"
+		      "background":"img/projects/bg-threadswap.jpg",
+		      "link": "https://github.com/luisasanmartin/ThreadSwap"
 	      },
 	      {
 		      "title": "sayWAT",
@@ -38,7 +42,8 @@
 		      "desc": "sayWAT was a solo web project done in Yale Hack that lets anyone post messages anonymously on a feed. This was my shady, first attempt at accesssing data using Parse as a back-end system.",
 		      "id": "saywat",
 		      "category": "code",
-		      "background":"img/projects/bg-saywat.jpg"
+		      "background":"img/projects/bg-saywat.jpg",
+		      "link": "sayWAT/watmain.html"
 	      },
 	      {
 		      "title": "SE++ logo",
@@ -46,7 +51,8 @@
 		      "desc": "I designed the logo for my software engineering's class of 2018 title, SE++.",
 		      "id": "selogo",
 		      "category": "design",
-		      "background":"img/projects/bg-se-logo.png"
+		      "background":"img/projects/bg-se-logo.png",
+		      "link":"#"
 	      },
 	      {
 		      "title": "Whirled.com",
@@ -54,7 +60,8 @@
 		      "desc": "This was my first experience with programming when I was 12. I created animated Flash characters and content with Actionscript functionality that compiles with the dev SDK. Whirled is an online multi-player world created by Three Rings.",
 		      "id": "whirled",
 		      "category": "design",
-		      "background":"img/projects/bg-whirled.png"
+		      "background":"img/projects/bg-whirled.png",
+		      "link": "http://www.whirled.com/#shop-5_7_c3028"
 	      },
 	      {
 		      "title": "myDay",
@@ -62,7 +69,8 @@
 		      "desc": "This was my first mobile project in a team of three during SE Hack Day. I was responsible for coding the XML layouts for the user interface.",
 		      "id": "myday",
 		      "category": "myday",
-		      "background":"img/projects/bg-myday.jpg"
+		      "background":"img/projects/bg-myday.jpg",
+		      "link": "https://github.com/dinahshi/MyDay"
 	      },
 	      {
 		      "title": "Yearbook",
@@ -70,7 +78,8 @@
 		      "desc": "Borrowing influences from Jay-Z/Kanye West's Watch The Throne album, I designed my high school's yearbook cover using Adobe Photoshop and Flash.",
 		      "id": "yearbook",
 		      "category": "design",
-		      "background":"img/projects/bg-yearbook.png"
+		      "background":"img/projects/bg-yearbook.png",
+		      "link": "https://app.box.com/s/bdbed67f337da24a17a1"
 	      }
     ]
 }

@@ -65,9 +65,8 @@ $(document).ready(function(){
 		setTimeout(function(){
 	    $(".element").typed({
 	        strings: [
-	        	"am not a hipster.^400",
-	        	"blog about about style.^300 (sorta)^500",
 	        	"study software engineering at uWaterloo.^500",
+	        	"blog about about style.^300 (sorta)^500",
 	        	"design and code in the web.^500"
 	        	],
 	        typeSpeed: 30,
