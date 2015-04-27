@@ -29,6 +29,7 @@ $desktop-width: 900px;
   display: flex;
   
   -webkit-flex-flow: row wrap;
+  flex-wrap: wrap;
 }
 
 @mixin tintedBG($imageUrl){
@@ -65,6 +66,11 @@ $desktop-width: 900px;
         left:0px;
         z-index:1;
         background: url(../img/overlay-w.png) repeat;
+        pointer-events:none;
+    &.tint{
+        z-index:2;
+        background: rgba(0,0,0,0.1);
+    }
     }
 
 header {
@@ -288,7 +294,7 @@ ul.tag-list li.last{margin-right: 0px;}
 
 .work .card .slider {cursor: pointer; padding: 45px 0 0; text-align: center; transition: all 0.4s; position: relative; top: 0;}
 .work .card .slider h3{position: relative; z-index: 10; padding: 0px 20px 10px; font-size: 18px; letter-spacing: 1px; opacity: 1; transition: all 0.4s;}
-.work .card .slider em{font-size: 14px;}
+.work .card .slider em{font-size: 14px; position:relative; z-index:10;}
 .work .card .slider.hover {padding: 20px 0 0;}
 .work .card .slider.shiftup {cursor: default; top: -100px;}
 .work .card .desc.shiftup {top: 20px; transition: all 0.2s;}
@@ -603,6 +609,9 @@ ul.tag-list li.last{margin-right: 0px;}
 }
 
 body.projects{
+    .panel.work{
+        padding-bottom: 0;
+    }
     header{
         color:#000;
         background: #fff;
@@ -618,6 +627,29 @@ body.projects{
         padding:15px;
         border: 3px solid #000;
     }
+
+    .work .card{
+        color:#fff;
+        em{
+            color:#fff;
+        }
+        h3{
+                padding-top:50px;
+                font-size: 25px;
+                text-transform: uppercase;
+            }
+        .desc{
+            top:101px;
+            background: #0A0A0A;
+            &.shiftup{
+                top: 20px;
+            }
+        }
+        .title{
+            padding-top: 20px;
+        }
+
+    }
 }
 
 /*HEADER for desktop*/
@@ -626,10 +658,7 @@ body.projects{
     body.projects{
         .work .card {
             width:33.2%;
-            border-right:1px solid #e4e4e4;;
-        }
-        .title{
-            padding-top: 20px;
+            border-bottom:1px solid #e4e4e4;
         }
         img.square-logo{
             width:$logo - 40px;
@@ -641,6 +670,18 @@ body.projects{
                 line-height: 0;
                 padding: 40px 0 0;
                 top:0;
+            }
+        }
+        footer{
+        .square-logo{
+            width: 40px;
+            height: 40px;
+            padding:30px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left:25px;
+            border: 3px solid #fff;
+
             }
         }
     }

@@ -21,11 +21,11 @@
 <header>
         <div class="top-nav clearfix">
             <div class="pull-left">
-                <img class="square-logo" src="img/square-logo-b.png"/>
+                <a href="index.html"><img class="square-logo" src="img/square-logo-b.png"/></a>
             </div>
             <div class="pull-right">
                 <ul class="menu">
-                    <li id="about"><a href="projects.html"><u>PROJECTS</u></a></li>
+                    <li id="about"><a href="projects.html">PROJECTS</a></li>
                     <li id="work"><a href="">WORK</a></li>
                     <li id="resume"><a href="2014/res/">RESUME</a></li>
                     <li id="blog" class="last"><a href="http://johnsington.tumblr.com/">BLOG</a></li>
@@ -35,45 +35,55 @@
 </header>
 <div class="u-max-full-width container work panel">
         <section class="work twelve columns">
-            <div class="work-container">
+            <div class="work-container" id="content-placeholder">
                     <!-- <div class="over"></div> -->
-                    <span class="card-row">
-                        <div class="card" id="klick">
-                            <div class="slider" id="c1">
-                                <img src="img/klick-logo-b.png"/>
-                                <h3>KLICK HEALTH</h3>
-                                <em class="subtext">Front End Web Developer</em>
-                                <div class="desc klick">
-                                    <div class="overlay"></div>
-                                    <p>I developed across multiple websites and email campaigns for various pharmaceutical brands.</p>
-                                </div>
+                    <div class="card" id="klick">
+                        <div class="slider" id="c1">
+                            <img src="img/klick-logo-b.png"/>
+                            <h3>KLICK HEALTH</h3>
+                            <em class="subtext">Front End Web Developer</em>
+                            <div class="desc klick">
+                                <div class="overlay"></div>
+                                <p>I developed across multiple websites and email campaigns for various pharmaceutical brands.</p>
                             </div>
-                        </div> <!--end of card-->
-                        <div class="card" id="cibc">
-                            <div class="slider" id="c2">
-                                <img src="img/cibc-logo-b.png"/>
-                                <h3>CIBC</h3>
-                                <em>Quality Assurance Analyst</em>
-                                <div class="desc">
-                                    <div class="overlay"></div>
-                                    <p>Using the HP Application Lifecyle Management software, I conducted manual testing for their online and mobile banking applications.</p>
-                                </div>
-                            </div>
-                        </div> <!--end of card-->
-                        <div class="card">
-                            <div class="slider" id="c3">
-                                <img src="img/mcd-logo-b.png"/>
-                                <h3>McDONALD'S</h3>
-                                <em>Crew Member</em>
-                                <div class="desc cibc">
-                                    <div class="overlay"></div>
-                                    <p>I provided exceptional customer service taking and presenting food orders to thousands of customers, including Rob Ford.</p>
-                                </div>
-                            </div>
-                        </div> <!--end of card-->
-                    </span>
+                        </div>
+                    </div> <!--end of card-->
             </div>
         </section>
-</div>    
+</div>
+<div class="u-full-width footer">
+        <footer class="panel">
+            <div class="">
+                <img class="square-logo" src="img/square-logo.png"/>
+                <div class="contact">
+                <p><i class="icon-phone"></i><span class="appleLinks">647-779-5994</span></p>
+                <p><i class="icon-mail"></i>jj.salaveria@gmail.com</p>
+                <div class="border"></div>
+                <ul class="icons">
+                    <li><a href="https://github.com/johnsington"><i class="icon-github-squared"></i></a></li>
+                    <li><a href="https://ca.linkedin.com/in/johnsalaveria"><i class="icon-linkedin-squared"></i></a></li>
+                    <li><a href="https://instagram.com/johnsington"><i class="icon-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/johnsington"><i class="icon-facebook-squared"></i></a></li>
+                </ul>
+                </div>
+                <p class="disclaimer">&copy; 2015 John Salaveria. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>  
 </body>
 </html>
+<script id="some-template" type="text/x-handlebars-template">
+    {{#projects}}
+    <div class="card" style="background: url({{background}}); background-size:cover;">
+    <div class="overlay"></div>
+    <div class="overlay tint"></div>
+        <div class="slider" id="{{id}}">
+            <h3>{{title}}</h3>
+            <em class="subtext">{{subtitle}}</em>
+            <div class="desc">
+                <p>{{desc}}</p>
+            </div>
+        </div>
+    </div>
+    {{/projects}}
+</script>  

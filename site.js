@@ -88,11 +88,6 @@ $(document).ready(function(){
 	    });
 	}, 500);
 	});
-	
-	// initialize card funcationality
-	$(".slider").each(function(){
-		cardInit("#" + $(this).attr("id"));
-	});
 
 	//phone carousel initialization
 	$('.phone').slick({
@@ -162,5 +157,30 @@ $(document).ready(function(){
 				console.log('error');
 			}
 		});
+	});
+
+	//projects-specific script
+	if ($('body').hasClass('projects')){
+
+		//Generates the project cards
+		
+		//handlebars template source
+		var source   = $("#some-template").html();
+		//compiles into a template
+		var template = Handlebars.compile(source);
+		$.getJSON('parameters.json', function(data){
+			console.log(data);
+			$("#content-placeholder").html(template(data));
+			$(".slider").each(function(){
+				console.log("this ran");
+				cardInit("#" + $(this).attr("id"));
+			});
+		});
+	}
+
+	// initialize card functionality
+	$(".slider").each(function(){
+		console.log("this ran");
+		cardInit("#" + $(this).attr("id"));
 	});
 });

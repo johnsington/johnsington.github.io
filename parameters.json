@@ -1,14 +1,76 @@
-{
-	"job":[
-	    {
-	    	"title": "The Ex", 
-	    	"lastName": "Buildings Attendant",
-	    	"desc" : "Next day, a large ship, the Rachel, was descried, bearing directly down upon the Pequod, all her spars thickly clustering with men."
-	    },
-	    {
-	    	"title": "The Deux", 
-	    	"lastName": "Buildings Attendant",
-	    	"desc" : "Next day, a large ship, the Rachel, was descried, bearing directly down upon the Pequod, all her spars thickly clustering with men."
-	    }
-	]
+{ 
+	"projects": [
+	      {
+		      "title": "johnsington.me",
+		      "subtitle": "2015 website redesign",
+		      "desc": "Implementing web development practices I learned from Klick Health, I rebuilt my whole website to use HTML5, CSS3, JQuery, and various JS plug-ins for interactivity. The site features responsive design, custom JQuery components, and a simple form attached to a Parse back-end.",
+		      "id": "site-redesign",
+		      "category": "design",
+		      "background":"img/projects/bg-site.jpg"
+	      },
+	      {
+		      "title": "#instakarma",
+		      "subtitle": "An Instagram like counter",
+		      "desc": "Using AJAX methods via JQuery, I leveraged the Instgram API to count the total likes of a user's recent photos. This was also an exercise in responsive user interface design between mobile and desktop clients.",
+		      "id": "instakarma",
+		      "category": "code",
+		      "background":"img/projects/bg-instakarma.jpg"
+	      },
+	      {
+		      "title": "Style Blog",
+		      "subtitle": "A personal venture into fashion",
+		      "desc": "Started this year, I shoot seasonal fashion looks and write about them using the Tumblr blog platform. The site uses a custom theme I developed using HTML and CSS.",
+		      "id": "styleblog",
+		      "category": "misc",
+		      "background":"http://s15.postimg.org/joaxz6s6j/vscocam_photo_3.jpg"
+	      },
+	      {
+		      "title": "ThreadSwap",
+		      "subtitle": "A local fashion classifieds using AngularJS",
+		      "desc": "Done over a 24-hour hack, I developed an front-end of ThreadSwap UI using HTML, CSS, and AngularJS. The main purpose was to explore the capabilities of Google's popular MV framework.",
+		      "id": "threadswap",
+		      "category": "code",
+		      "background":"img/projects/bg-threadswap.jpg"
+	      },
+	      {
+		      "title": "sayWAT",
+		      "subtitle": "An anonymous text wall",
+		      "desc": "sayWAT was a solo web project done in Yale Hack that lets anyone post messages anonymously on a feed. This was my shady, first attempt at accesssing data using Parse as a back-end system.",
+		      "id": "saywat",
+		      "category": "code",
+		      "background":"img/projects/bg-saywat.jpg"
+	      },
+	      {
+		      "title": "SE++ logo",
+		      "subtitle": "Brand identity for the SE 2018 class",
+		      "desc": "I designed the logo for my software engineering's class of 2018 title, SE++.",
+		      "id": "selogo",
+		      "category": "design",
+		      "background":"img/projects/bg-se-logo.png"
+	      },
+	      {
+		      "title": "Whirled.com",
+		      "subtitle": "Animated avatars for an online world",
+		      "desc": "This was my first experience with programming when I was 12. I created animated Flash characters and content with Actionscript functionality that compiles with the dev SDK. Whirled is an online multi-player world created by Three Rings.",
+		      "id": "whirled",
+		      "category": "design",
+		      "background":"img/projects/bg-whirled.png"
+	      },
+	      {
+		      "title": "myDay",
+		      "subtitle": "A personal daily photojournal",
+		      "desc": "This was my first mobile project in a team of three during SE Hack Day. I was responsible for coding the XML layouts for the user interface.",
+		      "id": "myday",
+		      "category": "myday",
+		      "background":"img/projects/bg-myday.jpg"
+	      },
+	      {
+		      "title": "Yearbook",
+		      "subtitle": "Cover design for 2011-2012 yearbook",
+		      "desc": "Borrowing influences from Jay-Z/Kanye West's Watch The Throne album, I designed my high school's yearbook cover using Adobe Photoshop and Flash.",
+		      "id": "yearbook",
+		      "category": "design",
+		      "background":"img/projects/bg-yearbook.png"
+	      }
+    ]
 }

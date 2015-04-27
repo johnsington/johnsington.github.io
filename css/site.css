@@ -605,7 +605,11 @@ strong {
   top: 0px;
   left: 0px;
   z-index: 1;
-  background: url(../img/overlay-w.png) repeat; }
+  background: url(../img/overlay-w.png) repeat;
+  pointer-events: none; }
+  .overlay.tint {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.1); }
 
 header {
   width: 100%;
@@ -815,7 +819,9 @@ ul.tag-list li.last {
   transition: all 0.4s; }
 
 .work .card .slider em {
-  font-size: 14px; }
+  font-size: 14px;
+  position: relative;
+  z-index: 10; }
 
 .work .card .slider.hover {
   padding: 20px 0 0; }
@@ -887,6 +893,7 @@ ul.tag-list li.last {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center; }
 
   .card-row {
@@ -897,6 +904,7 @@ ul.tag-list li.last {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
     border-bottom: 1px solid #e4e4e4; }
 
@@ -1107,6 +1115,8 @@ ul.tag-list li.last {
     text-align: center;
     /*width:271px;*/ }
 
+body.projects .panel.work {
+  padding-bottom: 0; }
 body.projects header {
   color: #000;
   background: #fff; }
@@ -1117,14 +1127,27 @@ body.projects img.square-logo {
   height: 50px;
   padding: 15px;
   border: 3px solid #000; }
+body.projects .work .card {
+  color: #fff; }
+  body.projects .work .card em {
+    color: #fff; }
+  body.projects .work .card h3 {
+    padding-top: 50px;
+    font-size: 25px;
+    text-transform: uppercase; }
+  body.projects .work .card .desc {
+    top: 101px;
+    background: #0A0A0A; }
+    body.projects .work .card .desc.shiftup {
+      top: 20px; }
+  body.projects .work .card .title {
+    padding-top: 20px; }
 
 /*HEADER for desktop*/
 @media (min-width: 920px) {
   body.projects .work .card {
     width: 33.2%;
-    border-right: 1px solid #e4e4e4; }
-  body.projects .title {
-    padding-top: 20px; }
+    border-bottom: 1px solid #e4e4e4; }
   body.projects img.square-logo {
     width: 60px;
     height: 60px;
@@ -1132,7 +1155,15 @@ body.projects img.square-logo {
   body.projects header .top-nav {
     line-height: 0;
     padding: 40px 0 0;
-    top: 0; } }
+    top: 0; }
+  body.projects footer .square-logo {
+    width: 40px;
+    height: 40px;
+    padding: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+    border: 3px solid #fff; } }
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
