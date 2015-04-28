@@ -1119,6 +1119,7 @@ body.projects .panel.work {
   padding-bottom: 0;
   width: 100%; }
 body.projects header {
+  display: block;
   color: #000;
   background: #fff; }
 body.projects a {

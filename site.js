@@ -178,9 +178,9 @@ $(document).ready(function(){
 	}
 
 	$('#dummy').ready(function() {
-	    $('header').css('background','url(img/garden-bg-2-2.jpg)');
-	    $('header').css('background-size','cover');
-	    $('header').fadeIn(1000);
+	    $('header.main').css('background','url(img/garden-bg-2-2.jpg)');
+	    $('header.main').css('background-size','cover');
+	    $('header.main').fadeIn(1000);
 	});
 	// initialize card functionality
 	$(".slider").each(function(){
