@@ -606,14 +606,17 @@ strong {
     z-index: 2;
     background: rgba(0, 0, 0, 0.1); }
 
+.black {
+  background: #000; }
+
 header {
+  display: none;
   width: 100%;
   color: white;
   letter-spacing: 3px;
   font-size: 20px;
   font-family: 'Source Sans Pro', san-serif;
   font-weight: 600;
-  background: url(../img/garden-bg-2-2.jpg);
   /*background-attachment: fixed;*/
   background-size: cover; }
   header a {

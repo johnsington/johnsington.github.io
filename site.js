@@ -177,6 +177,11 @@ $(document).ready(function(){
 		});
 	}
 
+	$('#dummy').ready(function() {
+	    $('header').css('background','url(img/garden-bg-2-2.jpg)');
+	    $('header').css('background-size','cover');
+	    $('header').fadeIn(1000);
+	});
 	// initialize card functionality
 	$(".slider").each(function(){
 		console.log("this ran");
