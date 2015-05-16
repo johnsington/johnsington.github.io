@@ -623,6 +623,9 @@ strong {
         letter-spacing: 3px;
         color: #739410;
         line-height: 25px; }
+      .top-menu ul li a:hover {
+        text-decoration: none;
+        color: #CC7A00; }
   .top-menu .navProjects, .top-menu .navWork {
     display: none; }
 
