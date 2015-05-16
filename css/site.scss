@@ -683,7 +683,7 @@ ul.tag-list li.last{margin-right: 0px;}
         opacity: 1;
     }
     &.panel.work{
-        padding: 0 0 40px;
+        padding: 0px;
         width:100%;
     }
     header{
@@ -740,6 +740,7 @@ body.projects{
             border-right:none;
             margin: 17px;
             box-shadow: -5px 5px #E4E4E4;
+            padding: 0 0 40px;
         }
         img.square-logo{
             width:$logo - 40px;

@@ -1166,7 +1166,7 @@ ul.tag-list li.last {
   text-align: center;
   opacity: 1; }
 .projects.panel.work {
-  padding: 0 0 40px;
+  padding: 0px;
   width: 100%; }
 .projects header {
   display: block;
@@ -1203,7 +1203,8 @@ body.projects img.square-logo {
     border-bottom: 1px solid #e4e4e4;
     border-right: none;
     margin: 17px;
-    box-shadow: -5px 5px #E4E4E4; }
+    box-shadow: -5px 5px #E4E4E4;
+    padding: 0 0 40px; }
   .projects img.square-logo {
     width: 60px;
     height: 60px;
