@@ -117,17 +117,19 @@ $(document).ready(function(){
 	  offset:700
 	});
 
-	var waypoints2 = $('.about').waypoint({
-		handler: function(direction){
-			if(direction=="down"){
-				$('#topMenu').slideDown();
-			}
-			else{
-				$('#topMenu').slideUp();
-			}
-		},
-		offset:300
-	})
+	setTimeout(function(){
+		var waypoints2 = $('.about').waypoint({
+			handler: function(direction){
+				if(direction=="down"){
+					$('#topMenu').slideDown();
+				}
+				else if(direction=="up"){
+					$('#topMenu').slideUp();
+				}
+			},
+			offset:300
+		});
+	}, 200);
 
 	//click event handles
 	$('.navWork').click(function(e){
