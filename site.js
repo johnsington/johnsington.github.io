@@ -2,15 +2,12 @@ function fadeSequentially(){
 	var duration = 600;
 
 	$('.skills ul li').each(function(i) {
- 			console.log(i);
  			$(this).delay( i*(duration/2) ).animate({opacity:1}, duration);
 	});
 }
 
 //fix this function
 function scrollTo(dest){
-	console.log('height: ' + $(dest).height());
-	// console.log('this: ' + $(dest).hasClass('skills'));
 	$('html, body').animate({scrollTop:$(dest).offset().top - $('#topMenu').height() - 30}, 1000);
 }
 
@@ -104,7 +101,6 @@ $(document).ready(function(){
 	//animate skill li's
 	var waypoints = $('.skills').waypoint({
 	  handler: function(direction) {
-	    console.log(this.element.id + ' hit');
 	    fadeSequentially();
 	  },
 	  offset:100
@@ -170,8 +166,8 @@ $(document).ready(function(){
 
 		emailMessage.save(null, {
 			success : function(emailMessage){
-				console.log('email message sent with id: ' + emailMessage.id);
-				console.log('message by ' + name + ' (' + email_id + '): ' + message);
+				// console.log('email message sent with id: ' + emailMessage.id);
+				// console.log('message by ' + name + ' (' + email_id + '): ' + message);
 				$('input#email, textarea, input#name').val("");
 				$('#submitForm').attr("value", "Submitted!").addClass("sentDisabled");
 			},
@@ -191,10 +187,8 @@ $(document).ready(function(){
 		//compiles into a template
 		var template = Handlebars.compile(source);
 		$.getJSON('parameters.json', function(data){
-			console.log(data);
 			$("#content-placeholder").html(template(data));
 			$(".slider").each(function(){
-				console.log("this ran");
 				cardInit("#" + $(this).attr("id"));
 			});
 		});
@@ -208,10 +202,8 @@ $(document).ready(function(){
 		//compiles into a template
 		var template = Handlebars.compile(source);
 		$.getJSON('parameters.json', function(data){
-			console.log(data);
 			$("#content-placeholder").html(template(data));
 			$(".slider").each(function(){
-				console.log("this ran");
 				cardInit("#" + $(this).attr("id"));
 			});
 		});
