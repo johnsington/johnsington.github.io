@@ -1117,7 +1117,7 @@ ul.tag-list li.last {
   .footer p:hover i {
     color: #CC7A00; }
   .footer .border {
-    width: 64%;
+    width: 74%;
     margin: 15px 0 0;
     border-top: 3px solid #808080; }
   .footer ul.icons {
@@ -1149,7 +1149,7 @@ ul.tag-list li.last {
     padding: 42px 0 0 15px; }
   .footer p {
     line-height: 18px;
-    font-size: 16px;
+    font-size: 14px;
     color: #D1D1D1;
     padding: 0; }
   .footer p:first-child {
