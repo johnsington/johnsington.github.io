@@ -19,6 +19,21 @@
 </head>
     
 <body>
+    <div class="top-menu" id="topMenu">
+        <div class="container">
+            <div class="six columns">
+                <a class="no-color" href="index.html"><h3>JOHN SALAVERIA</h3></a>
+            </div>
+            <div class="six columns">
+                <ul>
+                    <li class="navProjects"><a href="">PROJECTS</a></li>
+                    <li class="navWork"><a href="">WORK</a></li>
+                    <li class="resume"><a href="2014/res/">RESUME</a></li>
+                    <li class="last"><a href="http://johnsington.tumblr.com/">BLOG</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="black">
     <header class="main">
         <div class="overlay"></div>
@@ -28,9 +43,9 @@
             </div>
             <div class="pull-right">
                 <ul class="menu">
-                    <li id="about"><a href="projects.html">PROJECTS</a></li>
-                    <li id="work"><a href="">WORK</a></li>
-                    <li id="resume"><a href="2014/res/">RESUME</a></li>
+                    <li class="navProjects"><a href="">PROJECTS</a></li>
+                    <li class="navWork"><a href="">WORK</a></li>
+                    <li><a href="2014/res/">RESUME</a></li>
                     <li id="blog" class="last"><a href="http://johnsington.tumblr.com/">BLOG</a></li>
                 </ul>
             </div>
@@ -101,6 +116,15 @@
             </div>
         </div>
     </section>
+    <!--FEATURED PROJECTS-->
+    <div class="u-max-full-width container work panel projects featured">
+        <h2>Featured Projects</h2>
+        <section class="work twelve columns">
+            <div class="work-container" id="content-placeholder">
+                    <!-- <div class="over"></div> -->
+            </div>
+        </section>
+    </div>
     <div class="u-full-width intro panel">
         <div class="container intro">
             <section class = "six columns hidden-mobile">
@@ -116,11 +140,11 @@
                 <h2>Design and code.</h2>
                 <p><strong> By fostering a passion in both programming and visual design</strong>, I am able to spearhead the work I embark on with an intuition for great web user experiences. From hacking the Instagram API to creating digital content for a virtual world, my personal projects span a wide breadth of disciplines.
                 </p>
-                <a href="projects.html"><button class="button-primary">See Projects</button></a>
+                <a href="projects.html"><button class="button-primary">View more projects</button></a>
             </section>
         </div>
     </div>
-    <div class="u-max-full-width container work panel">
+    <div class="u-max-full-width container work panel jobs">
         <section class="work twelve columns">
                 <h2 class="text-center typed-2">Where I've worked</h2>
             <div class="work-container">
@@ -272,3 +296,20 @@
 </body>
 
 </html>
+
+\\card
+<script id="some-template" type="text/x-handlebars-template">
+    {{#projects}}
+    <div class="card" style="background: url({{background}}); background-size:cover;">
+    <div class="overlay"></div>
+    <div class="overlay tint"></div>
+        <div class="slider" id="{{id}}">
+            <h3>{{title}}</h3>
+            <em class="subtext">{{subtitle}}</em>
+            <div class="desc">
+                <p>{{desc}} <a class="proj" href="{{link}}">(link)</a></p>
+            </div>
+        </div>
+    </div>
+    {{/projects}}
+</script>  

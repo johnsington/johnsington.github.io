@@ -592,6 +592,49 @@ strong {
 .subtext {
   color: #808080; }
 
+/*-----MENU-------*/
+.top-menu {
+  display: none;
+  z-index: 100;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e4e4e4;
+  width: 100%;
+  padding: 15px 0; }
+  .top-menu .no-color {
+    color: #000; }
+  .top-menu .no-color:hover {
+    text-decoration: none; }
+  .top-menu h3 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 23px;
+    line-height: 25px; }
+  .top-menu ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0; }
+    .top-menu ul li {
+      display: inline;
+      margin-right: 10px; }
+      .top-menu ul li.last {
+        margin-right: 0; }
+      .top-menu ul li a {
+        letter-spacing: 3px;
+        color: #739410;
+        line-height: 25px; }
+  .top-menu .navProjects, .top-menu .navWork {
+    display: none; }
+
+@media (min-width: 920px) {
+  .top-menu h3 {
+    text-align: left; }
+  .top-menu ul {
+    text-align: right; }
+    .top-menu ul li {
+      margin-right: 20px; }
+  .top-menu .navProjects, .top-menu .navWork {
+    display: inline; } }
 /*-----HEADER-----*/
 .overlay {
   width: 100%;
@@ -1115,51 +1158,60 @@ ul.tag-list li.last {
     text-align: center;
     /*width:271px;*/ }
 
-body.projects .panel.work {
-  padding-bottom: 0;
+.projects h2 {
+  color: #000;
+  text-align: center;
+  opacity: 1; }
+.projects.panel.work {
+  padding: 0 0 40px;
   width: 100%; }
-body.projects header {
+.projects header {
   display: block;
   color: #000;
   background: #fff; }
-body.projects a {
+.projects a {
   color: #000; }
-  body.projects a.proj {
+  .projects a.proj {
     color: #739410; }
-body.projects img.square-logo {
-  width: 50px;
-  height: 50px;
-  padding: 15px;
-  border: 3px solid #000; }
-body.projects .work .card {
+.projects .work .card {
   color: #fff; }
-  body.projects .work .card em {
+  .projects .work .card em {
     color: #fff; }
-  body.projects .work .card h3 {
+  .projects .work .card h3 {
     padding-top: 50px;
     font-size: 25px;
     text-transform: uppercase; }
-  body.projects .work .card .desc {
+  .projects .work .card .desc {
     top: 101px;
     background: #0A0A0A; }
-    body.projects .work .card .desc.shiftup {
+    .projects .work .card .desc.shiftup {
       top: 20px; }
-  body.projects .work .card .title {
+  .projects .work .card .title {
     padding-top: 20px; }
+
+body.projects img.square-logo {
+  padding: 15px;
+  border: 3px solid #000; }
 
 /*HEADER for desktop*/
 @media (min-width: 920px) {
-  body.projects .work .card {
-    width: 33.2%;
-    border-bottom: 1px solid #e4e4e4; }
-  body.projects img.square-logo {
+  .projects .work .card {
+    width: 40%;
+    border-bottom: 1px solid #e4e4e4;
+    border-right: none;
+    margin: 17px;
+    box-shadow: -5px 5px #E4E4E4; }
+  .projects img.square-logo {
     width: 60px;
     height: 60px;
     padding: 25px; }
-  body.projects header .top-nav {
+  .projects header .top-nav {
     line-height: 0;
     padding: 40px 0 0;
     top: 0; }
+
+  body.projects .work.panel {
+    padding-top: 0; }
   body.projects footer .square-logo {
     width: 40px;
     height: 40px;

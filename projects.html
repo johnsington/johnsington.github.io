@@ -25,7 +25,7 @@
             </div>
             <div class="pull-right">
                 <ul class="menu">
-                    <li id="about"><a href="projects.html">PROJECTS</a></li>
+                    <li id="projects"><a href="">PROJECTS</a></li>
                     <li id="work"><a href="">WORK</a></li>
                     <li id="resume"><a href="2014/res/">RESUME</a></li>
                     <li id="blog" class="last"><a href="http://johnsington.tumblr.com/">BLOG</a></li>
@@ -37,17 +37,6 @@
         <section class="work twelve columns">
             <div class="work-container" id="content-placeholder">
                     <!-- <div class="over"></div> -->
-                    <div class="card" id="klick">
-                        <div class="slider" id="c1">
-                            <img src="img/klick-logo-b.png"/>
-                            <h3>KLICK HEALTH</h3>
-                            <em class="subtext">Front End Web Developer</em>
-                            <div class="desc klick">
-                                <div class="overlay"></div>
-                                <p>I developed across multiple websites and email campaigns for various pharmaceutical brands.</p>
-                            </div>
-                        </div>
-                    </div> <!--end of card-->
             </div>
         </section>
 </div>
@@ -73,7 +62,7 @@
 </body>
 </html>
 <script id="some-template" type="text/x-handlebars-template">
-    {{#projects}}
+    {{#archive}}
     <div class="card" style="background: url({{background}}); background-size:cover;">
     <div class="overlay"></div>
     <div class="overlay tint"></div>
@@ -85,5 +74,5 @@
             </div>
         </div>
     </div>
-    {{/projects}}
+    {{/archive}}
 </script>  

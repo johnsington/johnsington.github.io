@@ -11,7 +11,7 @@ function fadeSequentially(){
 function scrollTo(dest){
 	console.log('height: ' + $(dest).height());
 	// console.log('this: ' + $(dest).hasClass('skills'));
-	$('html, body').animate({scrollTop:$(dest).offset().top}, 1000);
+	$('html, body').animate({scrollTop:$(dest).offset().top - $('#topMenu').height() - 30}, 1000);
 }
 
 //Card modules
@@ -117,16 +117,37 @@ $(document).ready(function(){
 	  offset:700
 	});
 
+	var waypoints2 = $('.about').waypoint({
+		handler: function(direction){
+			if(direction=="down"){
+				$('#topMenu').slideDown();
+			}
+			else{
+				$('#topMenu').slideUp();
+			}
+		},
+		offset:300
+	})
 
 	//click event handles
-	$('#work').click(function(e){
+	$('.navWork').click(function(e){
 		e.preventDefault();
-		scrollTo($('.work'));
+		scrollTo($('.jobs'));
+	})
+	$('.navProjects').click(function(e){
+		e.preventDefault();
+		scrollTo($('.featured'));
 	})
 	//resizes landing to fit web client height
 	$(window).resize(function(){
 		resizeLanding();
 	});
+
+	// // initialize card functionality
+	// $(".ss").each(function(){
+	// 	console.log("this ran");
+	// 	cardInit("#" + $(this).attr("id"));
+	// });
 
 	//submits the message form
 	$('#submitForm').click(function(e){
@@ -159,6 +180,23 @@ $(document).ready(function(){
 	});
 
 	//projects-specific script
+	if ($('.work.panel').hasClass('projects')){
+
+		//Generates the project cards
+		
+		//handlebars template source
+		var source   = $("#some-template").html();
+		//compiles into a template
+		var template = Handlebars.compile(source);
+		$.getJSON('parameters.json', function(data){
+			console.log(data);
+			$("#content-placeholder").html(template(data));
+			$(".slider").each(function(){
+				console.log("this ran");
+				cardInit("#" + $(this).attr("id"));
+			});
+		});
+	}
 	if ($('body').hasClass('projects')){
 
 		//Generates the project cards
@@ -181,10 +219,5 @@ $(document).ready(function(){
 	    $('header.main').css('background','url(img/garden-bg-2-2.jpg)');
 	    $('header.main').css('background-size','cover');
 	    $('header.main').fadeIn(1000);
-	});
-	// initialize card functionality
-	$(".slider").each(function(){
-		console.log("this ran");
-		cardInit("#" + $(this).attr("id"));
 	});
 });

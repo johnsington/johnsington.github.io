@@ -46,6 +46,7 @@ $desktop-width: 900px;
     transform: skewY($deg);
 }
 
+
 .pull-left{float:left;}
 .pull-right{float:right;}
 .text-center{text-align: center;}
@@ -57,6 +58,64 @@ $desktop-width: 900px;
 .hidden-mobile{display:none;}
 .subtext {color: #808080;}
 
+/*-----MENU-------*/
+.top-menu{
+    display:none;
+    z-index: 100;
+    position: fixed;
+    background: rgba(255,255,255,0.9);
+    border-bottom:1px solid #e4e4e4;
+    width: 100%;
+    padding: 15px 0;
+    .no-color{
+        color:#000;
+    }
+    .no-color:hover{
+        text-decoration: none;
+    }
+    h3{
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: 23px;
+        line-height: 25px;
+    }
+    ul{
+        text-align: center;
+        list-style-type: none;
+        margin:0;
+        li{
+            display:inline;
+            margin-right:10px;
+            &.last{
+                margin-right: 0;
+            }
+            a{
+                letter-spacing: 3px;
+                color: #739410;
+                line-height: 25px;
+            }
+        }
+    }
+    .navProjects,.navWork{
+        display:none;
+    }
+}
+@media (min-width: 920px) {
+    .top-menu{
+        h3{
+            text-align: left;
+        }
+        ul{
+            text-align:right;
+            li{
+                margin-right:20px;
+            }
+        }
+        .navProjects,.navWork{
+            display:inline;
+        }
+    }
+}
 /*-----HEADER-----*/
 .overlay{
         width:100%;
@@ -613,9 +672,14 @@ ul.tag-list li.last{margin-right: 0px;}
     }
 }
 
-body.projects{
-    .panel.work{
-        padding-bottom: 0;
+.projects{
+    h2{
+        color:#000;
+        text-align: center;
+        opacity: 1;
+    }
+    &.panel.work{
+        padding: 0 0 40px;
         width:100%;
     }
     header{
@@ -629,13 +693,6 @@ body.projects{
         &.proj{
             color:#739410;
         }
-    }
-
-    img.square-logo{
-        width:$logo-mobile;
-        height:$logo-mobile;
-        padding:15px;
-        border: 3px solid #000;
     }
 
     .work .card{
@@ -662,13 +719,23 @@ body.projects{
     }
 }
 
+body.projects{
+    img.square-logo{
+        padding:15px;
+        border: 3px solid #000;
+    }
+}
+
 /*HEADER for desktop*/
 
 @media (min-width: 920px) {
-    body.projects{
+    .projects{
         .work .card {
-            width:33.2%;
+            width:40%;
             border-bottom:1px solid #e4e4e4;
+            border-right:none;
+            margin: 17px;
+            box-shadow: -5px 5px #E4E4E4;
         }
         img.square-logo{
             width:$logo - 40px;
@@ -682,19 +749,24 @@ body.projects{
                 top:0;
             }
         }
+    }
+    body.projects{
+        .work.panel{
+            padding-top:0;
+        }
         footer{
-        .square-logo{
-            width: 40px;
-            height: 40px;
-            padding:30px;
-            display: inline-block;
-            vertical-align: top;
-            margin-left:25px;
-            border: 3px solid #fff;
+            .square-logo{
+                width: 40px;
+                height: 40px;
+                padding:30px;
+                display: inline-block;
+                vertical-align: top;
+                margin-left:25px;
+                border: 3px solid #fff;
 
+                }
             }
         }
-    }
 }
 //typed.js blinking cursor
 .typed-cursor{
