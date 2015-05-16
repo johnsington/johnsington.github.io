@@ -182,7 +182,7 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 body {
-  line-height: 1.6;
+  /*line-height: 1.6;*/
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
@@ -1198,13 +1198,14 @@ body.projects img.square-logo {
 
 /*HEADER for desktop*/
 @media (min-width: 920px) {
+  .projects.panel.work {
+    padding: 0 0 40px; }
   .projects .work .card {
     width: 40%;
     border-bottom: 1px solid #e4e4e4;
     border-right: none;
     margin: 17px;
-    box-shadow: -5px 5px #E4E4E4;
-    padding: 0 0 40px; }
+    box-shadow: -5px 5px #E4E4E4; }
   .projects img.square-logo {
     width: 60px;
     height: 60px;

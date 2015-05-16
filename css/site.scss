@@ -734,13 +734,15 @@ body.projects{
 
 @media (min-width: 920px) {
     .projects{
+        &.panel.work{
+            padding: 0 0 40px;
+        }
         .work .card {
             width:40%;
             border-bottom:1px solid #e4e4e4;
             border-right:none;
             margin: 17px;
             box-shadow: -5px 5px #E4E4E4;
-            padding: 0 0 40px;
         }
         img.square-logo{
             width:$logo - 40px;
