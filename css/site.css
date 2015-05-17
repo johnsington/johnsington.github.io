@@ -557,6 +557,7 @@ a {
   transition: all 0.2s; }
 
 a:hover {
+  color: #FF9933;
   text-decoration: underline; }
 
 strong {
