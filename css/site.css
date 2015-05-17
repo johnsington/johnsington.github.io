@@ -557,7 +557,6 @@ a {
   transition: all 0.2s; }
 
 a:hover {
-  color: #CC7A00;
   text-decoration: underline; }
 
 strong {
@@ -625,7 +624,7 @@ strong {
         line-height: 25px; }
       .top-menu ul li a:hover {
         text-decoration: none;
-        color: #CC7A00; }
+        color: #FF9933; }
   .top-menu .navProjects, .top-menu .navWork {
     display: none; }
 
