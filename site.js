@@ -63,7 +63,7 @@ $(document).ready(function(){
 	    $(".element").typed({
 	        strings: [
 	        	"study software engineering at uWaterloo.^500",
-	        	"blog about about style.^300 (sorta)^500",
+	        	"blog about style.^300 (sorta)^500",
 	        	"design and code in the web.^500"
 	        	],
 	        typeSpeed: 30,
