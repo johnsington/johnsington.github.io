@@ -299,6 +299,24 @@ section.about{
             left:-35px;
         }
 }
+/*AWARDS*/
+
+section.awards{
+    .column{
+        padding: 50px 0 0;
+        height:190px;
+        text-align: center;
+        background: url(../img/ribbon-spin2.gif) no-repeat;
+        background-position: center;
+        background-size: 132px 184px;
+        p{
+            padding-top: 10px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    border-bottom: 1px solid #e4e4e4;
+}
 /*work module containers*/
 
 /*!!!!NOTE: CLEAN UP YOUR DAMN STYLING!!!*/
