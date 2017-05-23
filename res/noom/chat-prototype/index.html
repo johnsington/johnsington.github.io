@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Coach Dashboard | Suggested Messages Prototype</title>
+	  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+
+      body {
+      	font-size: 12px;
+        font-family: 'Roboto', sans-serif;
+        margin:0;
+        overflow:hidden;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .chat-header {
+        height:30px;
+      }
+
+      .dashboard {
+        width:100%;
+        height:100vh;
+        background: #797979;
+        background: url(./bg.png);
+        background-size: cover;
+      }
+      .chat-container {
+      	width: 320px;
+      	position: absolute;
+        background: #fff;
+      	bottom: 0;
+      	right: 20px;
+      }
+
+      .chat-history {
+        height: 300px;
+        overflow: scroll;
+        /*position: relative;*/
+      }
+
+      .chat-history img {
+        /*display: block;
+        position: absolute;
+        bottom: 8px;*/
+      }
+      .chat-container img {
+      	width:100%;
+      }
+
+      .chat-container.inactive .suggested-messages {
+        display:none;
+      }
+
+      .chat-container.inactive .chat-history {
+        height:487px;
+      }
+
+      .suggested-messages {
+        border-top: 1px solid #979797;
+        height: 170px;
+        background: #F2F2F2;
+        padding: 8px;
+        padding-right: 12px;
+        overflow-y: scroll;
+        overflow-x: visible;
+
+      }
+
+      .suggested-messages .item {
+        background: #fff;
+        padding: 8px;
+        margin-bottom: 8px;
+        border-radius: 10px 10px 10px 0;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .suggested-messages .item:hover {
+        box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+      }
+      .suggested-messages .item:hover .settings {
+        display: block;
+      }
+
+      .suggested-messages .item:hover span.preview {
+        width: 90%;
+      }
+
+      .suggested-messages .item .settings {
+        width: 14px;
+        display: none;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+      }
+
+      .suggested-messages .item.add {
+        background: none;
+        border: 2px dashed #4178d7;
+      }
+
+      .suggested-messages .item.add a {
+        margin: 4px 0;
+      }
+
+      .suggested-messages .item span.preview {
+        display:inline-block;
+        width:100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .suggested-messages .name {
+        font-weight: 500;
+        font-style:normal;
+      }
+      .suggested-messages .add-response {
+        text-align: right;
+        margin-bottom: 8px;
+      }
+      .suggested-messages a{
+        font-weight: 500;
+
+        color: #4178D7;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .suggested-messages .item .tooltiptext {
+        visibility: visible;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+     
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+        top: -5px;
+        right: 5%; 
+      }
+
+      .suggested-messages .item:hover .tooltiptext {
+        visibility: visible;
+      }
+
+      .chat-bar {
+        width: 100%;
+        background: #fff;
+        position: relative;
+      }
+
+      .chat-bar textarea {
+        width: calc(100% - 20px);
+        max-height: 120px;
+        color: #4D4D4D;
+        padding: 10px;
+        resize: none;
+        vertical-align: top;
+        font-size: 12px;
+        border: none;
+
+        outline: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
+
+      .chat-bar .switch {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 12px;
+        width: 21px;
+      }
+
+    </style>
+  </head>
+  <body>
+  
+  <div class="dashboard">
+  	<div class="chat-container">
+      <!--chat-->
+      <div class="chat-header">
+        <img src="./chat-header.png"/>
+      </div>
+      <div class="chat-history">
+    		<img src="./chat-pane.png"/>
+      </div>
+
+      <!--Suggested messages-->
+  		<div class="suggested-messages">
+        <div class="add-response">
+          <a href="#">Add a response</a>
+        </div>
+
+  			<div class="item" title="I see you’ve been active in the app the last couple of days - good job sticking with it!  Have there been any challenges with the action plan?">
+  				<a href="#">Custom Response</a>
+          <img class="settings" src="./icon-gear.png"/>
+  				<span class="preview">Hey <em class="name">Eloise</em> - I noticed that you have been eating a lot in the past</span>
+  			</div>
+        <div class="item" title="I see you’ve been active in the app the last couple of days - good job sticking with it!  Have there been any challenges with the action plan?">
+          <a href="#">Check in on the Weigh-in</a>
+          <img class="settings" src="./icon-gear.png"/>
+          <span class="preview">Hey <em class="name">Eloise</em> - I noticed that you have been eating some red foods tonight!</span>
+        </div>
+        <div class="item" title="I see you’ve been active in the app the last couple of days - good job sticking with it!  Have there been any challenges with the action plan?">
+          <a href="#">Check on Motivation</a>
+          <img class="settings" src="./icon-gear.png"/>
+          <span class="preview">I see you’ve been active in the app the last couple of days - good job sticking with it!  Have you been feeling motivated this week?</span>
+        </div>
+        <div class="item" title="I see you’ve been active in the app the last couple of days - good job sticking with it!  Have there been any challenges with the action plan?">
+          <a href="#">Check in on Action Plan</a>
+          <img class="settings" src="./icon-gear.png"/>
+          <span class="preview">Hi <em class="name">Eloise</em> - I see you’ve been active in the app the last couple of days - good job sticking with it!  Have there been any challenges with the action plan?</span>
+        </div>
+        <!-- <div class="item add">
+          <a href="#">Add a suggested response</a>
+        </div> -->
+
+  		</div>
+
+      <!--input-->
+      <div class="chat-bar">
+        <textarea rows="1" placeholder="Send a message" style="height: 17px;"></textarea>
+        <a href="#" class="switch"><img src="./icon-chats.png" width="21" height="14"/></a>
+      </div>
+
+  	</div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.switch').click(function(){
+        $('.chat-container').toggleClass('inactive');
+      });
+    });
+  </script>
+  </body>
+</html>
